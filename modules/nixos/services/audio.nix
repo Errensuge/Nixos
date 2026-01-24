@@ -1,3 +1,3 @@
 {
-  pipewire = import ../submodules/pipewire.nix;
+  imports = [ ../submodules/pipewire.nix ];
 }

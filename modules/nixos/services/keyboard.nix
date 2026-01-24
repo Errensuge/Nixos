@@ -1,3 +1,3 @@
 {
-  apple = import ../submodules/keyboard-apple.nix;
+  imports = [ ../submodules/keyboard-apple.nix ];
 }

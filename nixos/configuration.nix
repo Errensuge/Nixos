@@ -18,6 +18,7 @@
 
     # Modules
     inputs.self.nixos
+    inputs.self.apps
 
   ];
 
@@ -58,6 +59,15 @@
 
   # System configurations
   within.keyboard.apple.enable = true;
+
+  # Shell configurations
+  within.shell.zsh.enable = true;
+  within.shell.git.enable = true;
+  within.shell.nh.enable = true;
+
+  # Gnome configurations
+  within.gnome.shell.enable = true;
+  within.gnome.apps.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "25.11";
