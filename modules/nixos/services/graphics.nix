@@ -1,6 +1,6 @@
 {
   nvidia = {
-    base = import ../submodules/nvidia.nix;
-    prime = import ../submodules/nvidia-prime.nix;
+    base = ../submodules/nvidia.nix;
+    prime = ../submodules/nvidia-prime.nix;
   };
 }

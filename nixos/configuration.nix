@@ -17,11 +17,7 @@
     ./configurations/home-manager.nix
 
     # Modules
-    inputs.self.nixos.boot
-    inputs.self.nixos.graphics
-    inputs.self.nixos.audio
-    inputs.self.nixos.networks
-    inputs.self.nixos.keyboard
+    inputs.self.nixos.within
 
   ];
 
@@ -53,7 +49,7 @@
   time.timeZone = "Europe/Brussels";
 
   # System services
-  within.boot.systemd.enable = true;
+  within.boot.bootd.enable = true;
   within.boot.plymouth.enable = true;
   within.graphics.nvidia.base.enable = true;
   within.audio.pipewire.enable = true;

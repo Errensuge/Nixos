@@ -1,7 +1,9 @@
 {
-  boot = import ./services/boot.nix;
-  graphics = import ./services/graphics.nix;
-  networks = import ./services/networks.nix;
-  audio = import ./services/audio.nix;
-  keyboard = import ./services/keyboard.nix;
+  within = {
+    boot = ./services/boot.nix;
+    graphics = ./services/graphics.nix;
+    networks = ./services/networks.nix;
+    audio = ./services/audio.nix;
+    keyboard = ./services/keyboard.nix;
+  };
 }

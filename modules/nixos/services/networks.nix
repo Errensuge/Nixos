@@ -1,4 +1,4 @@
 {
-  dns = import ../submodules/dns.nix;
-  manager = import ../submodules/manager.nix;
+  dns = ../submodules/dns.nix;
+  manager = ../submodules/manager.nix;
 }

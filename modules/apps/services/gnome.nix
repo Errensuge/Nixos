@@ -1,4 +1,4 @@
 {
-  shell = import ../submodules/gnome-shell.nix;
-  apps = import ../submodules/gnome-apps.nix;
+  shell = ../submodules/gnome-shell.nix;
+  apps = ../submodules/gnome-apps.nix;
 }
