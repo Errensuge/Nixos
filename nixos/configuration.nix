@@ -16,9 +16,6 @@
     ./configurations/users.nix
     ./configurations/home-manager.nix
 
-    # Modules
-    inputs.self.nixos.within
-
   ];
 
   nixpkgs = {
@@ -49,15 +46,15 @@
   time.timeZone = "Europe/Brussels";
 
   # System services
-  within.boot.bootd.enable = true;
-  within.boot.plymouth.enable = true;
-  within.graphics.nvidia.base.enable = true;
-  within.audio.pipewire.enable = true;
-  within.networks.dns.enable = true;
-  within.networks.manager.enable = true;
+  nixos.boot.systemd.enable = true;
+  nixos.boot.plymouth.enable = true;
+  nixos.graphics.nvidia.base.enable = true;
+  nixos.audio.pipewire.enable = true;
+  nixos.networks.dns.enable = true;
+  nixos.networks.manager.enable = true;
 
   # System configurations
-  within.keyboard.apple.enable = true;
+  nixos.keyboard.apple.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "25.11";
