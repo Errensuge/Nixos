@@ -1,7 +1,7 @@
 {
   within = {
-    shell = ./services/shell.nix;
-    gnome = ./services/gnome.nix;
-    zed = ./submodules/zed.nix;
+    shell = import ./services/shell.nix;
+    gnome = import ./services/gnome.nix;
+    zed = import ./submodules/zed.nix;
   };
 }

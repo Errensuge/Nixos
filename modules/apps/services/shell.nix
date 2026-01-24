@@ -1,6 +1,6 @@
 {
-  zsh = ../submodules/zsh.nix;
-  nh = ../submodules/nh.nix;
-  git = ../submodules/git.nix;
-  docker = ../submodules/docker.nix;
+  zsh = import ../submodules/zsh.nix;
+  nh = import ../submodules/nh.nix;
+  git = import ../submodules/git.nix;
+  docker = import ../submodules/docker.nix;
 }

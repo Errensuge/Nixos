@@ -1,4 +1,4 @@
 {
-  systemd = ../submodules/systemd-boot.nix;
+  systemd = import ../submodules/systemd-boot.nix;
   plymouth = ../submodules/plymouth.nix;
 }
