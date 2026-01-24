@@ -53,10 +53,10 @@
   time.timeZone = "Europe/Brussels";
 
   # System services
-  within.boot.systemd = true;
-  within.boot.plymouth = true;
-  within.graphics.nvidia.base = true;
-  within.audio.pipewire = true;
+  within.boot.systemd.enable = true;
+  within.boot.plymouth.enable = true;
+  within.graphics.nvidia.base.enable = true;
+  within.audio.pipewire.enable = true;
   within.networks.dns.enable = true;
   within.networks.manager.enable = true;
 

@@ -11,29 +11,29 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    ...
-  } @ inputs: let
-    systems = ["x86_64-linux"];
-    forAllSystems = nixpkgs.lib.genAttrs systems;
-  in {
+  outputs =
+    {
+      nixpkgs,
+      ...
+    }@inputs:
+    let
+      systems = [ "x86_64-linux" ];
+      forAllSystems = nixpkgs.lib.genAttrs systems;
+    in
+    {
+      packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+      overlays = import ./overlays { inherit inputs; };
 
-    packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-    overlays = import ./overlays {inherit inputs;};
+      apps = import ./modules/apps;
+      nixos = import ./modules/nixos;
+      home-manager = import ./modules/home;
 
-    nixos = import ./modules/nixos;
-    home = import ./modules/home;
-    apps = import ./modules/apps;
-
-    nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
-        modules = [./nixos/configuration.nix];
+      nixosConfigurations = {
+        nixos = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          modules = [ ./nixos/configuration.nix ];
+        };
       };
-    };
 
-  };
+    };
 }
