@@ -47,12 +47,14 @@
     };
 
   networking.hostName = "nixos";
+  networking.firewall.enable = true;
+
   time.timeZone = "Europe/Brussels";
 
   # System services
   within.boot.systemd.enable = true;
   within.boot.plymouth.enable = true;
-  within.graphics.nvidia.base.enable = true;
+  within.graphics.nvidia.enable = true;
   within.audio.pipewire.enable = true;
   within.networks.dns.enable = true;
   within.networks.manager.enable = true;

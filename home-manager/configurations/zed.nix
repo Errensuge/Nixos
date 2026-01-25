@@ -13,18 +13,15 @@ in
     enable = mkEnableOption "System zed service";
   };
   config = mkIf cfg.enable {
-    environment = {
-      systemPackages = with pkgs; [
+    home.packages = with pkgs; [
 
-        # Nix languages parser
-        nil
-        nixd
+      # Nix languages parser
+      nil
+      nixd
 
-        # Zed Editor
-        zed-editor
+      # Zed Editor
+      zed-editor
 
-      ];
-    };
-
+    ];
   };
 }
