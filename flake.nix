@@ -12,11 +12,11 @@
   };
 
   outputs =
-    {
+    inputs@{
       nixpkgs,
       home-manager,
       ...
-    }@inputs:
+    }:
     let
       systems = [ "x86_64-linux" ];
       forAllSystems = nixpkgs.lib.genAttrs systems;
