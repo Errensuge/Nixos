@@ -10,11 +10,10 @@
 
     # Hardware
     ./hardware-configuration.nix
-    ./configurations/kernel.nix
+    ./parts/kernel.nix
 
     # Configurations
-    ./configurations/users.nix
-    ./configurations/home-manager.nix
+    ./parts/users.nix
 
     # Modules
     inputs.self.nixos

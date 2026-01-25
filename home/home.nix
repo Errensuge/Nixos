@@ -7,7 +7,6 @@
     ./configurations/gnome.nix
     ./configurations/firefox.nix
     ./configurations/ghostty.nix
-    ./configurations/zed.nix
   ];
 
   nixpkgs = {

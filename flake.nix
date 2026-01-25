@@ -14,6 +14,7 @@
   outputs =
     {
       nixpkgs,
+      home-manager,
       ...
     }@inputs:
     let
@@ -25,13 +26,19 @@
       overlays = import ./overlays { inherit inputs; };
 
       apps = import ./modules/apps;
+      home = import ./modules/home;
       nixos = import ./modules/nixos;
-      home-manager = import ./modules/home;
 
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
-          modules = [ ./nixos/configuration.nix ];
+          modules = [
+            ./nixos/configuration.nix
+          ]
+          ++ [
+            home-manager.nixosModules.home-manager
+            ./home/configuration.nix
+          ];
         };
       };
 
