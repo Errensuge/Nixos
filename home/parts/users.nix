@@ -1,5 +1,5 @@
-{ inputs, ... }:
+{ ... }:
 
 {
-  home-manager.users.alistreaza = import ./home.nix;
+  home-manager.users.alistreaza = import ../home.nix;
 }
