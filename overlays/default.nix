@@ -1,7 +1,7 @@
-{inputs, ...}: {
-
-  additions = final: _prev: import ../pkgs final.pkgs;
-  modifications = final: prev: {};
+{ inputs, ... }:
+{
+  additions = final: _prev: import ../pkgs final;
+  modifications = final: prev: { };
 
   unstable-packages = final: _prev: {
     unstable = import inputs.nixpkgs-unstable {
