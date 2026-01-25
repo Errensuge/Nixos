@@ -49,8 +49,8 @@ with lib.hm.gvariant;
 
       "org/gnome/desktop/background" = {
         picture-options = "zoom";
-        picture-uri = "file://" + ../wallpapers/mocha.svg;
-        picture-uri-dark = "file://" + ../wallpapers/mocha.svg;
+        picture-uri = "file://" + ./wallpapers/mocha.svg;
+        picture-uri-dark = "file://" + ./wallpapers/mocha.svg;
       };
 
       "org/gnome/shell/extensions/dash-to-panel" = {
