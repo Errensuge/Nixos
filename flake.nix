@@ -12,11 +12,11 @@
   };
 
   outputs =
-    inputs@{
+    {
       nixpkgs,
       home-manager,
       ...
-    }:
+    }@inputs:
     let
       systems = [ "x86_64-linux" ];
       forAllSystems = nixpkgs.lib.genAttrs systems;
@@ -29,18 +29,34 @@
       home = import ./modules/home;
       nixos = import ./modules/nixos;
 
+      nix.settings.experimental-features = "nix-command flakes";
+
+      nixpkgs = {
+        overlays = [
+          inputs.self.overlays.additions
+          inputs.self.overlays.modifications
+          inputs.self.overlays.unstable-packages
+        ];
+      };
+
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           modules = [
+            (
+              { ... }:
+              {
+                nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (nixpkgs.lib.getName pkg) [ "nvidia-x11" ];
+              }
+            )
             ./nixos/configuration.nix
           ]
           ++ [
+            {}
             home-manager.nixosModules.home-manager
             ./home/configuration.nix
           ];
         };
       };
-
     };
 }

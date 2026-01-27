@@ -1,9 +1,9 @@
 {
   imports = [
-    ./services/boot.nix
-    ./services/graphics.nix
-    ./services/networks.nix
-    ./services/audio.nix
-    ./services/keyboard.nix
+    ./subgroups/boot.nix
+    ./subgroups/graphics.nix
+    ./subgroups/networks.nix
+    ./subgroups/audio.nix
+    ./subgroups/keyboard.nix
   ];
 }

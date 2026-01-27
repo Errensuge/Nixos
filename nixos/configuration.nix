@@ -3,35 +3,20 @@
   ...
 }:
 {
-
   imports = [
 
     # Hardware
     ./hardware-configuration.nix
-    ./parts/kernel.nix
+    ./partials/kernel.nix
 
     # Configurations
-    ./parts/users.nix
+    ./partials/users.nix
 
     # Modules
     inputs.self.nixos
     inputs.self.apps
 
   ];
-
-  nixpkgs = {
-    overlays = [
-      inputs.self.overlays.additions
-      inputs.self.overlays.modifications
-      inputs.self.overlays.unstable-packages
-    ];
-  };
-
-  nix = {
-    settings = {
-      experimental-features = "nix-command flakes";
-    };
-  };
 
   networking.hostName = "nixos";
   networking.firewall.enable = true;
@@ -57,6 +42,9 @@
   # Gnome configurations
   within.gnome.shell.enable = true;
   within.gnome.apps.enable = true;
+
+  # Virtualisation Apps
+  within.shell.docker.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "25.11";

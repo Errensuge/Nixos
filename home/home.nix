@@ -4,24 +4,19 @@
 }:
 {
   imports = [
+
+    # App configurations
     ./configurations/gnome.nix
     ./configurations/firefox.nix
     ./configurations/ghostty.nix
-    ./configurations/zed.nix
+
+    # Modules
+    inputs.self.home
+
   ];
 
-  nixpkgs = {
-    overlays = [
-      inputs.self.overlays.additions
-      inputs.self.overlays.modifications
-      inputs.self.overlays.unstable-packages
-    ];
-  };
-
-  home = {
-    username = "alistreaza";
-    homeDirectory = "/home/alistreaza";
-  };
+  within.home.zed.enable = true;
+  within.home.jetbrains.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "25.11";

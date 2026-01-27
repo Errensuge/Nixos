@@ -1,6 +1,6 @@
 {
   imports = [
-    ./services/shell.nix
-    ./services/gnome.nix
+    ./subgroups/shell.nix
+    ./subgroups/gnome.nix
   ];
 }

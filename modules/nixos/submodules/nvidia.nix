@@ -9,12 +9,6 @@ in
   };
   config = mkIf cfg.enable {
 
-    nixpkgs.config.allowUnfreePredicate =
-      pkg:
-      builtins.elem (lib.getName pkg) [
-        "nvidia-x11"
-      ];
-
     services.xserver.enable = true;
     services.xserver.videoDrivers = [ "nvidia" ];
 
