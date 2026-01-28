@@ -19,7 +19,7 @@
       };
 
       os.ide.zed.enable = true;
-      os.ide.jetbrains.enable = true;
+      os.ide.jetbrains.enable = false;
 
       home.stateVersion = "25.11";
     };

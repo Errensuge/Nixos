@@ -25,6 +25,7 @@
 
   # Virtualisation Apps
   os.shell.docker.enable = true;
+  os.virtualisation.cuda.enable = true;
 
   # System version
   system.stateVersion = "25.11";

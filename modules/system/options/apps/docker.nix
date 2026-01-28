@@ -13,6 +13,5 @@ in
       enable = true;
       daemon.settings.features.cdi = true;
     };
-
   };
 }
