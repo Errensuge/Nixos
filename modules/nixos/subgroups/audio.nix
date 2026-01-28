@@ -1,3 +1,0 @@
-{
-  imports = [ ../submodules/pipewire.nix ];
-}
