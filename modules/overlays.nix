@@ -4,7 +4,6 @@
   ...
 }:
 {
-
   nixpkgs.config.allowUnfreePredicate =
     pkg:
     builtins.elem (nixpkgs.lib.getName pkg) [

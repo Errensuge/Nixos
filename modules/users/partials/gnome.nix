@@ -55,6 +55,7 @@ with lib.hm.gvariant;
 
       "org/gnome/shell/extensions/dash-to-panel" = {
         prefs-opened = true;
+
         isolate-monitors = true;
         isolate-workspaces = true;
 
@@ -70,8 +71,11 @@ with lib.hm.gvariant;
         dot-position = "BOTTOM";
         dot-style-focused = "METRO";
         dot-style-unfocused = "DOTS";
+
         focus-highlight = true;
         focus-highlight-dominant = true;
+
+        hide-overview-on-startup = true;
       };
 
       "org/gnome/shell/extensions/paperwm" = {
@@ -82,6 +86,25 @@ with lib.hm.gvariant;
         show-gpu = true;
         show-voltage = false;
         position-in-panel = 1;
+      };
+
+      "org/gnome/shell/extensions/paperwm/workspaces" = {
+        list = [
+          "personal"
+          "university"
+        ];
+      };
+
+      "org/gnome/shell/extensions/paperwm/workspaces/personal" = {
+        name = "Personel";
+        index = 0;
+        background = "file://" + ./wallpapers/mocha.svg;
+      };
+
+      "org/gnome/shell/extensions/paperwm/workspaces/university" = {
+        name = "Université";
+        index = 1;
+        background = "file://" + ./wallpapers/frappe.svg;
       };
 
     };
