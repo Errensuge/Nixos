@@ -24,8 +24,8 @@
   os.gnome.apps.enable = true;
 
   # Virtualisation Apps
-  os.shell.docker.enable = true;
   os.virtualisation.cuda.enable = true;
+  os.virtualisation.podman.enable = true;
 
   # System version
   system.stateVersion = "25.11";

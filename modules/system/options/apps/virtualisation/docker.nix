@@ -1,10 +1,10 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.os.shell.docker;
+  cfg = config.os.virtualisation.docker;
 in
 {
-  options.os.shell.docker = {
+  options.os.virtualisation.docker = {
     enable = mkEnableOption "System docker service";
   };
   config = mkIf cfg.enable {
@@ -13,5 +13,6 @@ in
       enable = true;
       daemon.settings.features.cdi = true;
     };
+
   };
 }

@@ -6,7 +6,7 @@
       isNormalUser = true;
       extraGroups = [
         "wheel"
-        "docker"
+        "podman"
       ];
     };
   };

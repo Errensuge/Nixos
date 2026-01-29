@@ -13,10 +13,6 @@ in
       enable = true;
       config = {
         init.defaultBranch = "main";
-        user = {
-          name = "Laurent Gueret";
-          email = "gueretlob@icloud.com";
-        };
       };
     };
 
