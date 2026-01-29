@@ -17,7 +17,17 @@
         config.allowUnfreePredicate =
           pkg:
           builtins.elem (nixpkgs-unstable.lib.getName pkg) [
+            "idea"
+            "clion"
+            "rider"
+            "goland"
             "pycharm"
+            "webstorm"
+            "phpstorm"
+            "datagrip"
+            "dataspell"
+            "ruby-mine"
+            "rust-rover"
           ];
       };
     })
