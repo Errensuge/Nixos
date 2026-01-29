@@ -19,7 +19,10 @@
       };
 
       os.ide.zed.enable = true;
-      os.ide.jetbrains.enable = true;
+
+      os.ide.jetbrains.pycharm.enable = true;
+      os.ide.jetbrains.clion.enable = true;
+      os.ide.jetbrains.rustrover.enable = true;
 
       home.stateVersion = "25.11";
     };

@@ -1,6 +1,10 @@
 { ... }:
 
 {
+  nix.settings.trusted-users = [
+    "root"
+    "alistreaza"
+  ];
   nix.settings.experimental-features = "nix-command flakes";
 
   # System services
@@ -26,6 +30,9 @@
   # Virtualisation Apps
   os.virtualisation.cuda.enable = true;
   os.virtualisation.podman.enable = true;
+
+  # Dev
+  os.shell.devenv.enable = true;
 
   # System version
   system.stateVersion = "25.11";
