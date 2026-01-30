@@ -18,18 +18,30 @@
         homeDirectory = "/home/alistreaza";
       };
 
+      programs.git = {
+        extraConfig = {
+          user = {
+            name = "Laurent Gueret";
+            email = "gueretlob@pm.me";
+          };
+        };
+      };
+
       # Code editor
       os.ide.zed.enable = true;
 
       # IDE Jetbrains
-      os.ide.jetbrains.idea.enable = false;
-      os.ide.jetbrains.pycharm.enable = false;
-      os.ide.jetbrains.phpstorm.enable = false;
-      os.ide.jetbrains.rustrover.enable = false;
+      os.ide.jetbrains.idea.enable = true;
+      os.ide.jetbrains.pycharm.enable = true;
+      os.ide.jetbrains.phpstorm.enable = true;
+      os.ide.jetbrains.rustrover.enable = true;
 
       # IDE Data Jetbrains
-      os.ide.jetbrains.datagrip.enable = false;
-      os.ide.jetbrains.dataspell.enable = false;
+      os.ide.jetbrains.datagrip.enable = true;
+      os.ide.jetbrains.dataspell.enable = true;
+
+      # Markdown Editor
+      os.editor.obsidian.enable = true;
 
       home.stateVersion = "25.11";
     };

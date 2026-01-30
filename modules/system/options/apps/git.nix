@@ -17,6 +17,5 @@ in
     };
 
     programs.ssh.enableAskPassword = false;
-
   };
 }
