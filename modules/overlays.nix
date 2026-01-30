@@ -6,7 +6,18 @@
 {
   nixpkgs.config.allowUnfreePredicate =
     pkg:
-    builtins.elem (nixpkgs.lib.getName pkg) [
+    nixpkgs.lib.all (
+      license:
+      license.free
+      || nixpkgs.lib.elem license.shortName [
+        "CUDA EULA"
+        "cuDNN EULA"
+        "cuSPARSELt EULA"
+        "cuTENSOR EULA"
+        "NVidia OptiX EULA"
+      ]
+    ) (nixpkgs.lib.toList pkg.meta.license)
+    || builtins.elem (nixpkgs.lib.getName pkg) [
       "nvidia-x11"
     ];
 
