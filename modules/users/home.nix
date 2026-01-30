@@ -18,7 +18,18 @@
         homeDirectory = "/home/alistreaza";
       };
 
+      # Code editor
       os.ide.zed.enable = true;
+
+      # IDE Jetbrains
+      os.ide.jetbrains.idea.enable = false;
+      os.ide.jetbrains.pycharm.enable = false;
+      os.ide.jetbrains.phpstorm.enable = false;
+      os.ide.jetbrains.rustrover.enable = false;
+
+      # IDE Data Jetbrains
+      os.ide.jetbrains.datagrip.enable = false;
+      os.ide.jetbrains.dataspell.enable = false;
 
       home.stateVersion = "25.11";
     };
