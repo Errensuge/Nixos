@@ -32,17 +32,17 @@
       os.ide.zed.enable = true;
 
       # IDE Jetbrains
-      os.ide.jetbrains.idea.enable = true;
-      os.ide.jetbrains.pycharm.enable = true;
-      os.ide.jetbrains.phpstorm.enable = true;
-      os.ide.jetbrains.rustrover.enable = true;
+      os.ide.jetbrains.idea.enable = false;
+      os.ide.jetbrains.pycharm.enable = false;
+      os.ide.jetbrains.phpstorm.enable = false;
+      os.ide.jetbrains.rustrover.enable = false;
 
       # IDE Data Jetbrains
-      os.ide.jetbrains.datagrip.enable = true;
-      os.ide.jetbrains.dataspell.enable = true;
+      os.ide.jetbrains.datagrip.enable = false;
+      os.ide.jetbrains.dataspell.enable = false;
 
       # Markdown Editor
-      os.editor.obsidian.enable = true;
+      os.editor.obsidian.enable = false;
 
       home.stateVersion = "25.11";
     };
