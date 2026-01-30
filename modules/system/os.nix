@@ -1,10 +1,6 @@
 { ... }:
 
 {
-  nix.settings.trusted-users = [
-    "root"
-    "alistreaza"
-  ];
   nix.settings.experimental-features = "nix-command flakes";
 
   # System services
@@ -12,8 +8,14 @@
   os.boot.plymouth.enable = true;
   os.graphics.nvidia.enable = true;
   os.audio.pipewire.enable = true;
+
+  # Networks services
   os.networks.dns.enable = true;
   os.networks.manager.enable = true;
+
+  # Printing and sharing
+  os.networks.printing.enable = true;
+  os.networks.samba.enable = true;
 
   # System configurations
   os.keyboard.apple.enable = true;
