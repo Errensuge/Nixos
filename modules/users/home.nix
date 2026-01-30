@@ -20,7 +20,7 @@
 
       # Apps shell
       programs.git = {
-        extraConfig = {
+        settings = {
           user = {
             name = "Laurent Gueret";
             email = "gueretlob@pm.me";
