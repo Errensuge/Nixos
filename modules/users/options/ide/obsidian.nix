@@ -13,12 +13,10 @@ in
     enable = mkEnableOption "Obsidian options";
   };
   config = mkIf cfg.enable {
-
     home.packages = with pkgs; [
 
       obsidian
 
     ];
-
   };
 }

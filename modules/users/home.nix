@@ -18,6 +18,7 @@
         homeDirectory = "/home/alistreaza";
       };
 
+      # Apps shell
       programs.git = {
         extraConfig = {
           user = {
