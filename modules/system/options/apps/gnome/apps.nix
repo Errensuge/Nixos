@@ -21,6 +21,7 @@ in
           # Gnome media apps
           papers
           celluloid
+          resources
         ]
         ++ [
           # Gnome files explorer
