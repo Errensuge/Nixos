@@ -12,11 +12,10 @@ in
   options.os.shell.dev = {
     enable = mkEnableOption "System git service";
   };
+
   config = mkIf cfg.enable {
-
     environment.systemPackages = with pkgs; [
-      llvm
+      gcc
     ];
-
   };
 }
