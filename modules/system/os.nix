@@ -34,6 +34,7 @@
   os.virtualisation.podman.enable = true;
 
   # Dev
+  os.shell.dev.enable = true;
   os.shell.devenv.enable = true;
 
   # System version
