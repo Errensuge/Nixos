@@ -1,10 +1,10 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.home.shell.zsh;
+  cfg = config.user.shell.zsh;
 in
 {
-  options.home.shell.zsh = {
+  options.user.shell.zsh = {
     enable = mkEnableOption "System zsh service";
   };
   config = mkIf cfg.enable {

@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.home.ide.jetbrains.rustrover;
+  cfg = config.user.ide.jetbrains.rustrover;
 in
 {
-  options.home.ide.jetbrains.rustrover = {
+  options.user.ide.jetbrains.rustrover = {
     enable = mkEnableOption "JetBrains options";
   };
   config = mkIf cfg.enable {

@@ -5,16 +5,15 @@
 }:
 with lib;
 let
-  cfg = config.home.shell.git;
+  cfg = config.user.shell.git;
 in
 {
-  options.home.shell.git = {
+  options.user.shell.git = {
     enable = mkEnableOption "Zen Editor options";
   };
   config = mkIf cfg.enable {
 
     programs.git = {
-      enable = true;
       config.init.defaultBranch = "main";
       settings = {
         user = {

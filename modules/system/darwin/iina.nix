@@ -1,10 +1,10 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.home.homebrew.iina;
+  cfg = config.os.homebrew.iina;
 in
 {
-  options.home.homebrew.iina = {
+  options.os.homebrew.iina = {
     enable = mkEnableOption "System iina homebrew service";
   };
   config = mkIf cfg.enable {

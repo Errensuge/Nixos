@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.home.ide.zed;
+  cfg = config.user.ide.zed;
 in
 {
-  options.home.ide.zed = {
+  options.user.ide.zed = {
     enable = mkEnableOption "Zen Editor options";
   };
   config = mkIf cfg.enable {

@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.home.ide.jetbrains.datagrip;
+  cfg = config.user.ide.jetbrains.datagrip;
 in
 {
-  options.home.ide.jetbrains.datagrip = {
+  options.user.ide.jetbrains.datagrip = {
     enable = mkEnableOption "JetBrains options";
   };
   config = mkIf cfg.enable {

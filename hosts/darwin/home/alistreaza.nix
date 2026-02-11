@@ -1,9 +1,9 @@
 { import-tree, ... }:
 {
   home-manager.users.alistreaza = {
-
     imports = [
-      (import-tree ../../common)
+      (import-tree ../../../modules/home/common)
+      (import-tree ../../../modules/home/darwin)
     ];
 
     home = {
@@ -12,21 +12,11 @@
     };
 
     # Shell apps
-    home.shell.zsh = true;
-    home.shell.git = true;
-    home.shell.neovim = true;
-    home.shell.nh.enable = true;
-    home.shell.devenv.enable = true;
-
-    # Homebrew apps
-    home.homebrew.iterm = true;
-    home.homebrew.zed = true;
-    home.homebrew.jetbrain = true;
-    home.homebrew.iina = true;
-    home.homebrew.zen = true;
-    home.homebrew.obsidian = true;
-    home.homebrew.microsoft = true;
-    home.homebrew.keka = true;
+    user.shell.zsh.enable = true;
+    user.shell.git.enable = true;
+    user.shell.neovim.enable = true;
+    user.shell.nh.enable = true;
+    user.shell.devenv.enable = true;
 
     # No Home Application Folders
     targets.darwin.linkApps.enable = false;

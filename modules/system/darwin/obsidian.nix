@@ -1,10 +1,10 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.home.homebrew.obsidian;
+  cfg = config.os.homebrew.obsidian;
 in
 {
-  options.home.homebrew.obsidian = {
+  options.os.homebrew.obsidian = {
     enable = mkEnableOption "System obsidian homebrew service";
   };
   config = mkIf cfg.enable {

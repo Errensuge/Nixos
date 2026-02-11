@@ -1,10 +1,10 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.home.homebrew.iterm;
+  cfg = config.os.homebrew.iterm;
 in
 {
-  options.home.homebrew.iterm = {
+  options.os.homebrew.iterm = {
     enable = mkEnableOption "System iterm homebrew service";
   };
   config = mkIf cfg.enable {

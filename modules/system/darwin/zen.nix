@@ -1,10 +1,10 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.home.homebrew.zen;
+  cfg = config.os.homebrew.zen;
 in
 {
-  options.home.homebrew.zen = {
+  options.os.homebrew.zen = {
     enable = mkEnableOption "System zen homebrew service";
   };
   config = mkIf cfg.enable {

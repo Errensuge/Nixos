@@ -1,10 +1,10 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.home.homebrew.jetbrain;
+  cfg = config.os.homebrew.jetbrain;
 in
 {
-  options.home.homebrew.jetbrain = {
+  options.os.homebrew.jetbrain = {
     enable = mkEnableOption "System jetbrain homebrew service";
   };
   config = mkIf cfg.enable {

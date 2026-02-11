@@ -1,9 +1,9 @@
 { import-tree, ... }:
 {
   home-manager.users.alistreaza = {
-
     imports = [
-      (import-tree ../../common)
+      (import-tree ../../../modules/home/common)
+      (import-tree ../../../modules/home/nixos)
     ];
 
     home = {
@@ -12,27 +12,27 @@
     };
 
     # Shell apps
-    home.shell.zsh = true;
-    home.shell.git = true;
-    home.shell.neovim = true;
-    home.shell.nh.enable = true;
-    home.shell.devenv.enable = true;
+    user.shell.zsh.enable = true;
+    user.shell.git.enable = true;
+    user.shell.neovim.enable = true;
+    user.shell.nh.enable = true;
+    user.shell.devenv.enable = true;
 
     # Code editor
-    home.ide.zed.enable = true;
+    user.ide.zed.enable = true;
 
     # IDE Jetbrains
-    home.ide.jetbrains.idea.enable = false;
-    home.ide.jetbrains.pycharm.enable = false;
-    home.ide.jetbrains.phpstorm.enable = false;
-    home.ide.jetbrains.rustrover.enable = false;
+    user.ide.jetbrains.idea.enable = false;
+    user.ide.jetbrains.pycharm.enable = false;
+    user.ide.jetbrains.phpstorm.enable = false;
+    user.ide.jetbrains.rustrover.enable = false;
 
     # IDE Data Jetbrains
-    home.ide.jetbrains.datagrip.enable = false;
-    home.ide.jetbrains.dataspell.enable = false;
+    user.ide.jetbrains.datagrip.enable = false;
+    user.ide.jetbrains.dataspell.enable = false;
 
     # Markdown Editor
-    home.editor.obsidian.enable = false;
+    user.editor.obsidian.enable = false;
 
     # The state version is required and should stay at the version you
     # originally installed.

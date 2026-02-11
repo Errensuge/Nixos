@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.home.ide.jetbrains.idea;
+  cfg = config.user.ide.jetbrains.idea;
 in
 {
-  options.home.ide.jetbrains.idea = {
+  options.user.ide.jetbrains.idea = {
     enable = mkEnableOption "JetBrains options";
   };
   config = mkIf cfg.enable {

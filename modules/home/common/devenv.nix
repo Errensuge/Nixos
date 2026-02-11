@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.home.shell.devenv;
+  cfg = config.user.shell.devenv;
 in
 {
-  options.home.shell.devenv = {
+  options.user.shell.devenv = {
     enable = mkEnableOption "System devenv service";
   };
   config = mkIf cfg.enable {

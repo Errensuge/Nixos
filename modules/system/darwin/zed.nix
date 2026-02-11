@@ -1,10 +1,10 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.home.homebrew.zed;
+  cfg = config.os.homebrew.zed;
 in
 {
-  options.home.homebrew.zed = {
+  options.os.homebrew.zed = {
     enable = mkEnableOption "System zed homebrew service";
   };
   config = mkIf cfg.enable {

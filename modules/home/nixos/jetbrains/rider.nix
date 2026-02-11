@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.home.ide.jetbrains.rider;
+  cfg = config.user.ide.jetbrains.rider;
 in
 {
-  options.home.ide.jetbrains.rider = {
+  options.user.ide.jetbrains.rider = {
     enable = mkEnableOption "JetBrains options";
   };
   config = mkIf cfg.enable {

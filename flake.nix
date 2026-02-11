@@ -54,23 +54,27 @@
           nixosConfigurations = {
             nixos = nixpkgs.lib.nixosSystem {
               specialArgs = {
+                self = self;
                 import-tree = import-tree;
                 home-manager = home-manager;
+                nixpkgs = nixpkgs;
+                nixpkgs-unstable = nixpkgs-unstable;
               };
               modules = [
+                ./hosts/nixos/overlays.nix
                 (import-tree ./hosts/common)
-                (import ./hosts/nixos/overlays.nix { inherit nixpkgs nixpkgs-unstable; })
 
                 (import-tree ./modules/system/nixos)
                 (import-tree ./hosts/nixos/system)
               ]
               ++ [
-                (import-tree ./hosts/common)
+                ./hosts/nixos/overlays.nix
                 home-manager.nixosModules.home-manager
-                (import ./hosts/nixos/overlays.nix { inherit nixpkgs nixpkgs-unstable; })
+                (import-tree ./hosts/common)
 
+                (import-tree ./modules/home/common)
                 (import-tree ./modules/home/nixos)
-                (import-tree ./hosts/darwin/home)
+                (import-tree ./hosts/nixos/home)
               ];
             };
           };
@@ -84,18 +88,16 @@
                 homebrew-cask = homebrew-cask;
               };
               modules = [
-                (import-tree ./hosts/common)
                 nix-homebrew.darwinModules.nix-homebrew
-                (import ./hosts/nixos/overlays.nix { inherit nixpkgs nixpkgs-unstable; })
-
+                (import-tree ./modules/system/darwin)
+                
+                (import-tree ./hosts/common)
                 (import-tree ./hosts/darwin/system)
               ]
               ++ [
-                (import-tree ./hosts/common)
                 home-manager.darwinModules.home-manager
-                (import ./hosts/nixos/overlays.nix { inherit nixpkgs nixpkgs-unstable; })
-
-                (import-tree ./modules/home/darwin)
+                
+                (import-tree ./hosts/common)
                 (import-tree ./hosts/darwin/home)
               ];
             };

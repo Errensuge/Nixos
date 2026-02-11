@@ -1,10 +1,10 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.home.shell.neovim;
+  cfg = config.user.shell.neovim;
 in
 {
-  options.home.shell.neovim = {
+  options.user.shell.neovim = {
     enable = mkEnableOption "System neovim service";
   };
   config = mkIf cfg.enable {

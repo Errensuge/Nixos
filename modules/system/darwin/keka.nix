@@ -1,10 +1,10 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.home.homebrew.keka;
+  cfg = config.os.homebrew.keka;
 in
 {
-  options.home.homebrew.keka = {
+  options.os.homebrew.keka = {
     enable = mkEnableOption "System keka homebrew service";
   };
   config = mkIf cfg.enable {
