@@ -10,7 +10,7 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Nix Darwin
-    nix-darwin.url = "github:nix-darwin/nix-darwin/master";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-25.11";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     # Home manager
@@ -68,9 +68,8 @@
               ++ [
                 (import-tree ./hosts/common)
                 home-manager.nixosModules.home-manager
-                (import /hosts/nixos/overlays.nix { inherit nixpkgs nixpkgs-unstable; })
+                (import ./hosts/nixos/overlays.nix { inherit nixpkgs nixpkgs-unstable; })
 
-                (import-tree ./modules/home/common)
                 (import-tree ./modules/home/nixos)
                 (import-tree ./hosts/darwin/home)
               ];
@@ -96,9 +95,8 @@
               ++ [
                 (import-tree ./hosts/common)
                 home-manager.darwinModules.home-manager
-                (import /hosts/nixos/overlays.nix { inherit nixpkgs nixpkgs-unstable; })
+                (import ./hosts/nixos/overlays.nix { inherit nixpkgs nixpkgs-unstable; })
 
-                (import-tree ./modules/home/common)
                 (import-tree ./modules/home/darwin)
                 (import-tree ./hosts/darwin/home)
               ];

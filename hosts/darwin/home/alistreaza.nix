@@ -1,15 +1,15 @@
-{ ... }:
+{ import-tree, ... }:
 {
   home-manager.users.alistreaza = {
+
+    imports = [
+      (import-tree ../../common)
+    ];
 
     home = {
       username = "alistreaza";
       homeDirectory = /Users/alistreaza;
     };
-
-    # No Home Application Folders
-    targets.darwin.linkApps.enable = false;
-    targets.darwin.copyApps.enable = false;
 
     # Apps
     home.shell.zsh = true;
@@ -26,6 +26,10 @@
     home.homebrew.microsoft = true;
 
     home.homebrew.keka = true;
+
+    # No Home Application Folders
+    targets.darwin.linkApps.enable = false;
+    targets.darwin.copyApps.enable = false;
 
     # The state version is required and should stay at the version you
     # originally installed.

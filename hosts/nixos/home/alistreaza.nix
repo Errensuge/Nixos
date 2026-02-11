@@ -3,8 +3,7 @@
   home-manager.users.alistreaza = {
 
     imports = [
-      (import-tree ./options)
-      (import-tree ./partials)
+      (import-tree ../../common)
     ];
 
     home = {
@@ -12,6 +11,7 @@
       homeDirectory = "/home/alistreaza";
     };
 
+    # Apps
     home.shell.zsh = true;
     home.shell.git = true;
 
@@ -31,6 +31,8 @@
     # Markdown Editor
     home.editor.obsidian.enable = false;
 
+    # The state version is required and should stay at the version you
+    # originally installed.
     home.stateVersion = "25.11";
   };
 }
