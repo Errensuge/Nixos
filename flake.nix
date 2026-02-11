@@ -90,13 +90,13 @@
               modules = [
                 nix-homebrew.darwinModules.nix-homebrew
                 (import-tree ./modules/system/darwin)
-                
+
                 (import-tree ./hosts/common)
                 (import-tree ./hosts/darwin/system)
               ]
               ++ [
                 home-manager.darwinModules.home-manager
-                
+
                 (import-tree ./hosts/common)
                 (import-tree ./hosts/darwin/home)
               ];

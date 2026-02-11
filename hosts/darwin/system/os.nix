@@ -11,7 +11,4 @@
   os.homebrew.obsidian.enable = true;
   os.homebrew.microsoft.enable = true;
   os.homebrew.keka.enable = true;
-
-  # System version
-  system.stateVersion = "25.11";
 }

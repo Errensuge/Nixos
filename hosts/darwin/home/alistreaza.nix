@@ -3,7 +3,6 @@
   home-manager.users.alistreaza = {
     imports = [
       (import-tree ../../../modules/home/common)
-      (import-tree ../../../modules/home/darwin)
     ];
 
     home = {

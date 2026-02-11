@@ -14,7 +14,6 @@ in
   config = mkIf cfg.enable {
 
     programs.git = {
-      config.init.defaultBranch = "main";
       settings = {
         user = {
           name = "Laurent Gueret";
