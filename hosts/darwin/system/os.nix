@@ -1,5 +1,6 @@
 { ... }:
 {
+  system.primaryUser = "alistreaza";
   nixpkgs.hostPlatform = "aarch64-darwin";
 
   # Homebrew apps

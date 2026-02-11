@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.user.ide.jetbrains.rubymine;
+  cfg = config.home.ide.jetbrains.rubymine;
 in
 {
-  options.user.ide.jetbrains.rubymine = {
+  options.home.ide.jetbrains.rubymine = {
     enable = mkEnableOption "JetBrains options";
   };
   config = mkIf cfg.enable {

@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.user.ide.jetbrains.dataspell;
+  cfg = config.home.ide.jetbrains.dataspell;
 in
 {
-  options.user.ide.jetbrains.dataspell = {
+  options.home.ide.jetbrains.dataspell = {
     enable = mkEnableOption "JetBrains options";
   };
   config = mkIf cfg.enable {

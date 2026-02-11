@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.user.ide.jetbrains.pycharm;
+  cfg = config.home.ide.jetbrains.pycharm;
 in
 {
-  options.user.ide.jetbrains.pycharm = {
+  options.home.ide.jetbrains.pycharm = {
     enable = mkEnableOption "JetBrains options";
   };
   config = mkIf cfg.enable {

@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.user.editor.obsidian;
+  cfg = config.home.md.obsidian;
 in
 {
-  options.user.editor.obsidian = {
+  options.home.md.obsidian = {
     enable = mkEnableOption "Obsidian options";
   };
   config = mkIf cfg.enable {

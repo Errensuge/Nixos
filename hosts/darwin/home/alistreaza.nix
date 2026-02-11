@@ -11,11 +11,11 @@
     };
 
     # Shell apps
-    user.shell.zsh.enable = true;
-    user.shell.git.enable = true;
-    user.shell.neovim.enable = true;
-    user.shell.nh.enable = true;
-    user.shell.devenv.enable = true;
+    home.shell.zsh.enable = true;
+    home.shell.git.enable = true;
+    home.shell.neovim.enable = true;
+    home.shell.nh.enable = true;
+    home.shell.devenv.enable = true;
 
     # No Home Application Folders
     targets.darwin.linkApps.enable = false;

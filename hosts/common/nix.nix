@@ -1,7 +1,5 @@
 { ... }:
 {
-  system.primaryUser = "alistreaza";
-
   nix = {
     settings = {
       experimental-features = "nix-command flakes";

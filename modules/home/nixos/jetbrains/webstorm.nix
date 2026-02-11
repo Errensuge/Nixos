@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.user.ide.jetbrains.webstorm;
+  cfg = config.home.ide.jetbrains.webstorm;
 in
 {
-  options.user.ide.jetbrains.webstorm = {
+  options.home.ide.jetbrains.webstorm = {
     enable = mkEnableOption "JetBrains options";
   };
   config = mkIf cfg.enable {

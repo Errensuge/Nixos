@@ -5,10 +5,10 @@
 }:
 with lib;
 let
-  cfg = config.user.shell.git;
+  cfg = config.home.shell.git;
 in
 {
-  options.user.shell.git = {
+  options.home.shell.git = {
     enable = mkEnableOption "Zen Editor options";
   };
   config = mkIf cfg.enable {

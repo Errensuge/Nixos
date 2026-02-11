@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.user.ide.jetbrains.phpstorm;
+  cfg = config.home.ide.jetbrains.phpstorm;
 in
 {
-  options.user.ide.jetbrains.phpstorm = {
+  options.home.ide.jetbrains.phpstorm = {
     enable = mkEnableOption "JetBrains options";
   };
   config = mkIf cfg.enable {

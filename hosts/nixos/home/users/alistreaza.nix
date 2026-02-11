@@ -2,8 +2,8 @@
 {
   home-manager.users.alistreaza = {
     imports = [
-      (import-tree ../../../modules/home/common)
-      (import-tree ../../../modules/home/nixos)
+      (import-tree ../../../../modules/home/common)
+      (import-tree ../../../../modules/home/nixos)
       (import-tree ../partials)
     ];
 
@@ -13,27 +13,28 @@
     };
 
     # Shell apps
-    user.shell.zsh.enable = true;
-    user.shell.git.enable = true;
-    user.shell.neovim.enable = true;
-    user.shell.nh.enable = true;
-    user.shell.devenv.enable = true;
+    home.shell.zsh.enable = true;
+    home.shell.git.enable = true;
+    home.shell.neovim.enable = true;
+    home.shell.nh.enable = true;
+    home.shell.devenv.enable = true;
 
     # Code editor
-    user.ide.zed.enable = true;
+    home.ide.zed.enable = true;
 
     # IDE Jetbrains
-    user.ide.jetbrains.idea.enable = false;
-    user.ide.jetbrains.pycharm.enable = false;
-    user.ide.jetbrains.phpstorm.enable = false;
-    user.ide.jetbrains.rustrover.enable = false;
+    home.ide.jetbrains.idea.enable = true;
+    home.ide.jetbrains.pycharm.enable = true;
+    home.ide.jetbrains.phpstorm.enable = true;
+    home.ide.jetbrains.rustrover.enable = true;
+    home.ide.jetbrains.goland.enable = true;
 
     # IDE Data Jetbrains
-    user.ide.jetbrains.datagrip.enable = false;
-    user.ide.jetbrains.dataspell.enable = false;
+    home.ide.jetbrains.datagrip.enable = true;
+    home.ide.jetbrains.dataspell.enable = true;
 
     # Markdown Editor
-    user.editor.obsidian.enable = false;
+    home.md.obsidian.enable = true;
 
     # The state version is required and should stay at the version you
     # originally installed.

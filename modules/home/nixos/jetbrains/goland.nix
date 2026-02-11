@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.user.ide.jetbrains.goland;
+  cfg = config.home.ide.jetbrains.goland;
 in
 {
-  options.user.ide.jetbrains.goland = {
+  options.home.ide.jetbrains.goland = {
     enable = mkEnableOption "JetBrains options";
   };
   config = mkIf cfg.enable {

@@ -1,10 +1,10 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.user.shell.nh;
+  cfg = config.home.shell.nh;
 in
 {
-  options.user.shell.nh = {
+  options.home.shell.nh = {
     enable = mkEnableOption "System nh service";
   };
   config = mkIf cfg.enable {

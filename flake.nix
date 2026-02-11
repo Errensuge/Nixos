@@ -70,10 +70,8 @@
               ++ [
                 ./hosts/nixos/overlays.nix
                 home-manager.nixosModules.home-manager
-                (import-tree ./hosts/common)
 
-                (import-tree ./modules/home/common)
-                (import-tree ./modules/home/nixos)
+                (import-tree ./hosts/common)
                 (import-tree ./hosts/nixos/home/users)
               ];
             };
