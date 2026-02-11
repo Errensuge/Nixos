@@ -10,7 +10,7 @@ in
   config = mkIf cfg.enable {
 
     programs.zsh = {
-      enableCompletion = true;
+      enable = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
       oh-my-zsh = {

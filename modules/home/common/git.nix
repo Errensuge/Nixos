@@ -14,6 +14,7 @@ in
   config = mkIf cfg.enable {
 
     programs.git = {
+      enable = true;
       settings = {
         user = {
           name = "Laurent Gueret";
