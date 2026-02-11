@@ -61,7 +61,6 @@
                 (import-tree ./hosts/common)
                 (import ./hosts/nixos/overlays.nix { inherit nixpkgs nixpkgs-unstable; })
 
-                (import-tree ./modules/system/common)
                 (import-tree ./modules/system/nixos)
                 (import-tree ./hosts/nixos/system)
               ]
@@ -89,7 +88,6 @@
                 nix-homebrew.darwinModules.nix-homebrew
                 (import ./hosts/nixos/overlays.nix { inherit nixpkgs nixpkgs-unstable; })
 
-                (import-tree ./modules/system/common)
                 (import-tree ./hosts/darwin/system)
               ]
               ++ [
