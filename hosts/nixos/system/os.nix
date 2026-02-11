@@ -18,11 +18,6 @@
   # System configurations
   os.keyboard.apple.enable = true;
 
-  # Shell configurations
-  os.shell.zsh.enable = true;
-  os.shell.git.enable = true;
-  os.shell.nh.enable = true;
-
   # Gnome configurations
   os.gnome.shell.enable = true;
   os.gnome.apps.enable = true;
@@ -32,7 +27,7 @@
   os.virtualisation.podman.enable = true;
 
   # Dev
-  os.shell.dev.enable = true;
+  os.shell.nh.enable = true;
   os.shell.devenv.enable = true;
 
   # Ssh

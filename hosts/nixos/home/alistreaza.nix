@@ -14,6 +14,7 @@
     # Apps
     home.shell.zsh = true;
     home.shell.git = true;
+    home.shell.neovim = true;
 
     # Code editor
     home.ide.zed.enable = true;

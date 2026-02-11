@@ -14,6 +14,7 @@
     # Apps
     home.shell.zsh = true;
     home.shell.git = true;
+    home.shell.neovim = true;
 
     # Homebrew apps
     home.homebrew.iterm = true;
