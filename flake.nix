@@ -74,7 +74,7 @@
 
                 (import-tree ./modules/home/common)
                 (import-tree ./modules/home/nixos)
-                (import-tree ./hosts/nixos/home)
+                (import-tree ./hosts/nixos/home/users)
               ];
             };
           };

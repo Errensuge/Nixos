@@ -4,6 +4,7 @@
     imports = [
       (import-tree ../../../modules/home/common)
       (import-tree ../../../modules/home/nixos)
+      (import-tree ../partials)
     ];
 
     home = {
