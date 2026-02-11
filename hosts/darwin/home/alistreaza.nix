@@ -11,21 +11,21 @@
       homeDirectory = /Users/alistreaza;
     };
 
-    # Apps
+    # Shell apps
     home.shell.zsh = true;
     home.shell.git = true;
     home.shell.neovim = true;
+    home.shell.nh.enable = true;
+    home.shell.devenv.enable = true;
 
     # Homebrew apps
     home.homebrew.iterm = true;
     home.homebrew.zed = true;
     home.homebrew.jetbrain = true;
-
     home.homebrew.iina = true;
     home.homebrew.zen = true;
     home.homebrew.obsidian = true;
     home.homebrew.microsoft = true;
-
     home.homebrew.keka = true;
 
     # No Home Application Folders
