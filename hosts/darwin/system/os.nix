@@ -12,6 +12,7 @@
   os.homebrew.obsidian.enable = true;
   os.homebrew.microsoft.enable = true;
   os.homebrew.keka.enable = true;
+  os.homebrew.eul.enable = true;
 
   # Fix on R install. # Case sensitive bug
   environment.systemPackages = with pkgs; [ R ];
