@@ -11,10 +11,11 @@
         GuestEnabled = false;
       };
       dock = {
+        minimize-to-application = true;
         show-recents = false;
         tilesize = 30;
         autohide = false;
-        orientation = "right";
+        orientation = "bottom";
         persistent-apps = [
           { app = "/Applications/Zen.app"; }
           { app = "/System/Applications/Mail.app"; }

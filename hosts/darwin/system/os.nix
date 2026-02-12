@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   system.primaryUser = "alistreaza";
   nixpkgs.hostPlatform = "aarch64-darwin";
@@ -12,4 +12,7 @@
   os.homebrew.obsidian.enable = true;
   os.homebrew.microsoft.enable = true;
   os.homebrew.keka.enable = true;
+
+  # Fix on R install. # Case sensitive bug
+  environment.systemPackages = with pkgs; [ R ];
 }
