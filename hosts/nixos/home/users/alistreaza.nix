@@ -23,17 +23,6 @@
     # Code editor
     home.ide.zed.enable = true;
 
-    # IDE Jetbrains
-    home.ide.jetbrains.idea.enable = true;
-    home.ide.jetbrains.pycharm.enable = true;
-    home.ide.jetbrains.phpstorm.enable = true;
-    home.ide.jetbrains.rustrover.enable = true;
-    home.ide.jetbrains.goland.enable = true;
-
-    # IDE Data Jetbrains
-    home.ide.jetbrains.datagrip.enable = true;
-    home.ide.jetbrains.dataspell.enable = true;
-
     # Markdown Editor
     home.md.obsidian.enable = true;
 
