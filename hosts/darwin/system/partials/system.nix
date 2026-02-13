@@ -15,8 +15,9 @@
         show-recents = false;
         tilesize = 30;
         autohide = false;
-        orientation = "bottom";
+        orientation = "right";
         persistent-apps = [
+          { app = "/System/Applications/Apps.app"; }
           { app = "/Applications/Zen.app"; }
           { app = "/System/Applications/Mail.app"; }
           { app = "/Applications/Obsidian.app"; }

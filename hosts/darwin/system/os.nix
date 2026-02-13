@@ -12,5 +12,4 @@
   os.homebrew.obsidian.enable = true;
   os.homebrew.microsoft.enable = false;
   os.homebrew.keka.enable = true;
-  os.homebrew.eul.enable = true;
 }
