@@ -6,10 +6,10 @@
   # Homebrew apps
   os.homebrew.iterm.enable = true;
   os.homebrew.zed.enable = true;
-  os.homebrew.jetbrain.enable = true;
+  os.homebrew.jetbrain.enable = false;
   os.homebrew.iina.enable = true;
   os.homebrew.zen.enable = true;
   os.homebrew.obsidian.enable = true;
-  os.homebrew.microsoft.enable = true;
+  os.homebrew.microsoft.enable = false;
   os.homebrew.keka.enable = true;
 }
