@@ -16,6 +16,8 @@
     home.shell.git.enable = true;
     home.shell.neovim.enable = true;
 
+    home.env.jdk.enable = true;
+
     # No Home Application Folders
     targets.darwin.linkApps.enable = false;
     targets.darwin.copyApps.enable = false;

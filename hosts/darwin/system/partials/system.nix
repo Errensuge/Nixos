@@ -15,7 +15,7 @@
         show-recents = false;
         tilesize = 30;
         autohide = false;
-        orientation = "right";
+        orientation = "bottom";
         persistent-apps = [
           { app = "/System/Applications/Apps.app"; }
           { app = "/Applications/Zen.app"; }
