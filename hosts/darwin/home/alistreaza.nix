@@ -17,6 +17,7 @@
     home.shell.neovim.enable = true;
 
     home.env.jdk.enable = true;
+    home.env.python.enable = true;
 
     # No Home Application Folders
     targets.darwin.linkApps.enable = false;

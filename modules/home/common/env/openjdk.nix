@@ -15,8 +15,12 @@ in
   config = mkIf cfg.enable {
 
     home.packages = with pkgs; [
-      javaPackages.compiler.openjdk25
-    ]
+      jdk25
+    ];
+
+    home.sessionVariables = {
+      JAVA_HOME = "${pkgs.jdk25}";
+    };
 
   };
 }
