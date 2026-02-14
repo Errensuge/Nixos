@@ -18,5 +18,9 @@ in
       rustup
     ];
 
+    home.sessionVariables = {
+      RUSTUP_HOME = ".rustup";
+    };
+
   };
 }

@@ -18,6 +18,8 @@
 
     home.env.jdk.enable = true;
     home.env.python.enable = true;
+    home.env.rust.enable = true;
+    home.env.r.enable = true;
 
     # No Home Application Folders
     targets.darwin.linkApps.enable = false;
