@@ -1,9 +1,9 @@
-{ import-tree, ... }:
+{ import-tree, paneru, ... }:
 {
   home-manager.users.alistreaza = {
     imports = [
       (import-tree ../../../modules/home/common)
-      ./derivations/paneru.nix
+      paneru.homeModules.paneru
     ];
 
     home = {

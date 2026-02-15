@@ -99,6 +99,7 @@
                 (import-tree ./hosts/darwin/system)
               ]
               ++ [
+                (import-tree ./hosts/darwin/overlays)
                 home-manager.darwinModules.home-manager
 
                 (import-tree ./hosts/common)
