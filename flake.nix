@@ -17,6 +17,10 @@
     home-manager.url = "github:nix-community/home-manager/release-25.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    # Paneru
+    paneru.url = "github:karinushka/paneru";
+    paneru.inputs.nixpkgs.follows = "nixpkgs";
+
     # Nix Homebrew
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
     homebrew-core = {
@@ -32,6 +36,7 @@
   outputs =
     inputs@{
       self,
+      paneru,
       nixpkgs,
       nix-darwin,
       flake-parts,
@@ -80,6 +85,7 @@
             "MacBook-Air-de-Laurent" = nix-darwin.lib.darwinSystem {
               specialArgs = {
                 self = self;
+                paneru = paneru;
                 import-tree = import-tree;
                 home-manager = home-manager;
                 homebrew-core = homebrew-core;

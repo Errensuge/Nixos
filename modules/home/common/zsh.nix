@@ -13,9 +13,13 @@ in
       enable = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
+      dotDir = "${config.xdg.configHome}/zsh";
+      history = {
+        path = "${config.xdg.dataHome}/zsh/history";
+      };
       oh-my-zsh = {
         enable = true;
-        theme = "af-magic";
+        theme = "dieter";
       };
     };
 

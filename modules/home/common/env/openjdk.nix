@@ -20,6 +20,9 @@ in
 
     home.sessionVariables = {
       JAVA_HOME = "${pkgs.jdk25}";
+      M2_HOME = "${config.xdg.dataHome}/maven";
+      MVN_HOME = "${config.xdg.dataHome}/maven";
+      MAVEN_HOME = "${config.xdg.dataHome}/maven";
     };
 
   };
