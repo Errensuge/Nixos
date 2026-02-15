@@ -1,9 +1,9 @@
-{ import-tree, pkgs, ... }:
+{ import-tree, ... }:
 {
   home-manager.users.alistreaza = {
     imports = [
-      pkgs.paneru.homeModules.paneru
       (import-tree ../../../modules/home/common)
+      (import-tree ./partials)
     ];
 
     home = {
@@ -29,10 +29,6 @@
     # No Home Application Folders
     targets.darwin.linkApps.enable = false;
     targets.darwin.copyApps.enable = false;
-
-    services.paneru = {
-      enable = true;
-    };
 
     # The state version is required and should stay at the version you
     # originally installed.

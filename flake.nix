@@ -55,10 +55,10 @@
             nixos = nixpkgs.lib.nixosSystem {
               specialArgs = {
                 self = self;
-                import-tree = import-tree;
-                home-manager = home-manager;
                 nixpkgs = nixpkgs;
                 nixpkgs-unstable = nixpkgs-unstable;
+                import-tree = import-tree;
+                home-manager = home-manager;
               };
               modules = [
                 ./hosts/nixos/overlays.nix
@@ -93,9 +93,10 @@
                 (import-tree ./hosts/darwin/system)
               ]
               ++ [
-                (import-tree ./hosts/darwin/overlays)
-                home-manager.darwinModules.home-manager
+                (import-tree ./overlays/darwin)
+                (import-tree ./modules/system/darwin)
 
+                home-manager.darwinModules.home-manager
                 (import-tree ./hosts/common)
                 (import-tree ./hosts/darwin/home)
               ];
