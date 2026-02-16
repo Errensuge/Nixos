@@ -19,7 +19,6 @@
 
     # Nix & languages env deps
     home.env.nix.enable = true;
-    home.env.shell.enable = false;
 
     # No Home Application Folders
     targets.darwin.linkApps.enable = false;
