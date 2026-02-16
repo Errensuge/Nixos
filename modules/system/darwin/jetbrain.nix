@@ -12,12 +12,9 @@ in
     homebrew.casks = [
       "intellij-idea"
       "pycharm"
-      "phpstorm"
-      "rustrover"
-      "goland"
-      "datagrip"
-      "dataspell"
       "clion"
+      "rustrover"
+      "dataspell"
     ];
 
   };

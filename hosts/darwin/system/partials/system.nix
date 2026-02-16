@@ -14,7 +14,7 @@
         minimize-to-application = true;
         show-recents = false;
         tilesize = 30;
-        autohide = false;
+        autohide = true;
         orientation = "bottom";
         persistent-apps = [
           { app = "/System/Applications/Apps.app"; }
@@ -36,7 +36,7 @@
           { app = "/Applications/DataSpell.app"; }
           { app = "/Applications/iTerm.app"; }
         ];
-        persistent-others= [];
+        persistent-others = [ ];
         wvous-bl-corner = 1;
         wvous-br-corner = 3;
         wvous-tl-corner = 1;

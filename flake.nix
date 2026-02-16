@@ -61,7 +61,7 @@
                 home-manager = home-manager;
               };
               modules = [
-                ./hosts/nixos/overlays.nix
+                (import-tree ./overlays/nixos)
                 (import-tree ./hosts/common)
 
                 (import-tree ./modules/system/nixos)
@@ -94,7 +94,6 @@
               ]
               ++ [
                 (import-tree ./overlays/darwin)
-                (import-tree ./modules/system/darwin)
 
                 home-manager.darwinModules.home-manager
                 (import-tree ./hosts/common)
