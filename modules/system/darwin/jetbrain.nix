@@ -14,7 +14,6 @@ in
       "pycharm"
       "clion"
       "rustrover"
-      "dataspell"
     ];
 
   };

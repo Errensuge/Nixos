@@ -6,17 +6,16 @@
 }:
 with lib;
 let
-  cfg = config.home.env.python;
+  cfg = config.home.env.shell;
 in
 {
-  options.home.env.python = {
+  options.home.env.shell = {
     enable = mkEnableOption "Zen Editor options";
   };
   config = mkIf cfg.enable {
 
     home.packages = with pkgs; [
-      python3
-      uv
+      devenv
     ];
 
   };

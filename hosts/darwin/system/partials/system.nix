@@ -14,7 +14,7 @@
         minimize-to-application = true;
         show-recents = false;
         tilesize = 30;
-        autohide = true;
+        autohide = false;
         orientation = "bottom";
         persistent-apps = [
           { app = "/System/Applications/Apps.app"; }
@@ -28,12 +28,8 @@
           { app = "/Applications/Zed.app"; }
           { app = "/Applications/IntelliJ IDEA.app"; }
           { app = "/Applications/PyCharm.app"; }
-          { app = "/Applications/PhpStorm.app"; }
-          { app = "/Applications/RustRover.app"; }
           { app = "/Applications/CLion.app"; }
-          { app = "/Applications/GoLand.app"; }
-          { app = "/Applications/DataGrip.app"; }
-          { app = "/Applications/DataSpell.app"; }
+          { app = "/Applications/RustRover.app"; }
           { app = "/Applications/iTerm.app"; }
         ];
         persistent-others = [ ];

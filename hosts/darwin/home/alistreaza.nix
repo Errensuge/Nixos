@@ -17,14 +17,9 @@
     home.shell.git.enable = true;
     home.shell.neovim.enable = true;
 
-    # Nix env deps
+    # Nix & languages env deps
     home.env.nix.enable = true;
-
-    # Languages env deps
-    home.env.r.enable = true;
-    home.env.jdk.enable = true;
-    home.env.rust.enable = true;
-    home.env.python.enable = true;
+    home.env.shell.enable = false;
 
     # No Home Application Folders
     targets.darwin.linkApps.enable = false;
