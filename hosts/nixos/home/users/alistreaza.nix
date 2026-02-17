@@ -13,12 +13,10 @@
     };
 
     # Shell apps
+    home.shell.nh.enable = true;
     home.shell.zsh.enable = true;
     home.shell.git.enable = true;
     home.shell.neovim.enable = true;
-
-    home.shell.nh.enable = true;
-    home.shell.env.enable = true;
 
     # Code editor
     home.ide.zed.enable = true;

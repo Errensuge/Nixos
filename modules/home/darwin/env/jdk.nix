@@ -6,16 +6,17 @@
 }:
 with lib;
 let
-  cfg = config.home.env.shell;
+  cfg = config.home.env.jdk;
 in
 {
-  options.home.env.shell = {
-    enable = mkEnableOption "Zen Editor options";
+  options.home.env.jdk = {
+    enable = mkEnableOption "System nh service";
   };
   config = mkIf cfg.enable {
 
     home.packages = with pkgs; [
-      devenv
+      jdk25_headless
+      maven
     ];
 
   };

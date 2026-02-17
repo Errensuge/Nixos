@@ -19,14 +19,14 @@
 
     # Nix Homebrew
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
-    homebrew-core = {
-      url = "github:homebrew/homebrew-core";
-      flake = false;
-    };
-    homebrew-cask = {
-      url = "github:homebrew/homebrew-cask";
-      flake = false;
-    };
+    homebrew-core.url = "github:homebrew/homebrew-core";
+    homebrew-core.flake = false;
+    homebrew-cask.url = "github:homebrew/homebrew-cask";
+    homebrew-cask.flake = false;
+
+    # Rust Overlay
+    rust-overlay.url = "github:oxalica/rust-overlay";
+    rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -38,6 +38,7 @@
       import-tree,
       home-manager,
       nix-homebrew,
+      rust-overlay,
       homebrew-core,
       homebrew-cask,
       nixpkgs-unstable,
@@ -68,7 +69,7 @@
                 (import-tree ./hosts/nixos/system)
               ]
               ++ [
-                ./hosts/nixos/overlays.nix
+                (import-tree ./overlays/nixos)
                 home-manager.nixosModules.home-manager
 
                 (import-tree ./hosts/common)
@@ -81,6 +82,7 @@
               specialArgs = {
                 self = self;
                 import-tree = import-tree;
+                rust-overlay = rust-overlay;
                 home-manager = home-manager;
                 homebrew-core = homebrew-core;
                 homebrew-cask = homebrew-cask;
