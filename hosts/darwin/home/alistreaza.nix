@@ -1,4 +1,4 @@
-{ import-tree, ... }:
+{ lib, import-tree, ... }:
 {
   home-manager.users.alistreaza = {
     imports = [
@@ -9,6 +9,17 @@
     home = {
       username = "alistreaza";
       homeDirectory = /Users/alistreaza;
+      sessionVariables = {
+        XDG_CACHE_HOME = "$HOME/.cache";
+        XDG_CONFIG_HOME = "$HOME/.config";
+        XDG_DATA_HOME = "$HOME/.local/share";
+        XDG_STATE_HOME = "$HOME/.local/state";
+      };
+      file = {
+        "$HOME/.config/ghostty/config" = {
+          source = lib.file.mkOutOfStoreSymlink ./config/ghostty;
+        };
+      };
     };
 
     # Shell apps
@@ -19,7 +30,9 @@
 
     # Nix & languages env deps
     home.env.nix.enable = true;
+    home.env.jdk.enable = true;
     home.env.rust.enable = true;
+    home.env.python.enable = true;
 
     # No Home Application Folders
     targets.darwin.linkApps.enable = false;

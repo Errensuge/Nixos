@@ -19,5 +19,10 @@ in
       maven
     ];
 
+    home.sessionVariables = {
+      JAVA_HOME = "${pkgs.jdk25_headless}";
+      M2_HOME = "${config.home.sessionVariables.XDG_DATA_HOME}/m2";
+    };
+
   };
 }

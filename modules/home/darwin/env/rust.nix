@@ -14,12 +14,12 @@ in
   };
   config = mkIf cfg.enable {
 
-    home.packages = with pkgs; [
-      rust-bin.stable.latest.default.override
-      {
-        extensions = [ "rust-src" ];
-      }
-    ];
+    home.packages = with pkgs; [ rustup ];
+
+    home.sessionVariables = {
+      CARGO_HOME = "${config.home.sessionVariables.XDG_DATA_HOME}/cargo";
+      RUSTUP_HOME = "${config.home.sessionVariables.XDG_DATA_HOME}/rustup";
+    };
 
   };
 }
