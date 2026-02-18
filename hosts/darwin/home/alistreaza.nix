@@ -1,4 +1,4 @@
-{ lib, import-tree, ... }:
+{ config, import-tree, ... }:
 {
   home-manager.users.alistreaza = {
     imports = [
@@ -17,7 +17,7 @@
       };
       file = {
         "$HOME/.config/ghostty/config" = {
-          source = lib.file.mkOutOfStoreSymlink ./config/ghostty;
+          source = ./config/ghostty;
         };
       };
     };

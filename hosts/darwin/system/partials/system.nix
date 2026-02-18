@@ -30,7 +30,7 @@
           { app = "/Applications/PyCharm.app"; }
           { app = "/Applications/CLion.app"; }
           { app = "/Applications/RustRover.app"; }
-          { app = "/Applications/iTerm.app"; }
+          { app = "/Applications/Ghostty.app"; }
         ];
         persistent-others = [ ];
         wvous-bl-corner = 1;
