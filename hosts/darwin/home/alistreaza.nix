@@ -16,7 +16,7 @@
         XDG_STATE_HOME = "$HOME/.local/state";
       };
       file = {
-        "$HOME/.config/ghostty/" = {
+        ".config/ghostty/" = {
           source = ./config/ghostty;
         };
       };
