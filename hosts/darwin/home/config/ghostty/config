@@ -4,6 +4,8 @@ macos-titlebar-style = "tabs"
 # Window padding & size
 window-padding-x = 8
 window-padding-y = 0,2
+window-height = 25
+window-width = 100
 
 # Themes
 background-blur=true

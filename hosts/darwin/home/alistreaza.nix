@@ -1,4 +1,4 @@
-{ config, import-tree, ... }:
+{ import-tree, ... }:
 {
   home-manager.users.alistreaza = {
     imports = [
@@ -16,7 +16,7 @@
         XDG_STATE_HOME = "$HOME/.local/state";
       };
       file = {
-        "$HOME/.config/ghostty/config" = {
+        "$HOME/.config/ghostty/" = {
           source = ./config/ghostty;
         };
       };
