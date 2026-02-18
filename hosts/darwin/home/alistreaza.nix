@@ -15,12 +15,15 @@
         XDG_DATA_HOME = "$HOME/.local/share";
         XDG_STATE_HOME = "$HOME/.local/state";
       };
+    };
+
+    home.file = {
       file = {
         ".config/ghostty/" = {
           source = ./config/ghostty;
         };
       };
-    };
+    }
 
     # Shell apps
     home.shell.nh.enable = true;
