@@ -1,5 +1,4 @@
 {
-  pkgs,
   lib,
   config,
   ...
@@ -13,8 +12,6 @@ in
     enable = mkEnableOption "System nh service";
   };
   config = mkIf cfg.enable {
-
-    home.packages = with pkgs; [ rustup ];
 
     home.sessionVariables = {
       CARGO_HOME = "${config.home.sessionVariables.XDG_DATA_HOME}/cargo";

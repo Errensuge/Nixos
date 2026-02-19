@@ -18,12 +18,10 @@
     };
 
     home.file = {
-      file = {
-        ".config/ghostty/" = {
-          source = ./config/ghostty;
-        };
+      ".config/ghostty/" = {
+        source = ./config/ghostty;
       };
-    }
+    };
 
     # Shell apps
     home.shell.nh.enable = true;

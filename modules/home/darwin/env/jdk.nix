@@ -16,7 +16,6 @@ in
 
     home.packages = with pkgs; [
       jdk25_headless
-      maven
     ];
 
     home.sessionVariables = {
