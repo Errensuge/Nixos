@@ -14,6 +14,9 @@ in
       "pycharm"
       "clion"
       "rustrover"
+      "phpstorm"
+      "rubymine"
+      "goland"
     ];
 
   };

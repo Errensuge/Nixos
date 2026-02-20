@@ -30,6 +30,9 @@
           { app = "/Applications/PyCharm.app"; }
           { app = "/Applications/CLion.app"; }
           { app = "/Applications/RustRover.app"; }
+          { app = "/Applications/PhpStorm.app"; }
+          { app = "/Applications/RubyMine.app"; }
+          { app = "/Applications/GoLand.app"; }
           { app = "/Applications/Ghostty.app"; }
         ];
         persistent-others = [ ];
