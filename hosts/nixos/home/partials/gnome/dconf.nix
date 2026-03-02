@@ -47,12 +47,6 @@ with lib.hm.gvariant;
         color-scheme = "prefer-dark";
       };
 
-      "org/gnome/desktop/background" = {
-        picture-options = "zoom";
-        picture-uri = "file://" + ./wallpapers/mocha.svg;
-        picture-uri-dark = "file://" + ./wallpapers/mocha.svg;
-      };
-
       "org/gnome/shell/extensions/dash-to-panel" = {
         prefs-opened = true;
 
@@ -98,13 +92,11 @@ with lib.hm.gvariant;
       "org/gnome/shell/extensions/paperwm/workspaces/personal" = {
         name = "Personel";
         index = 0;
-        background = "file://" + ./wallpapers/mocha.svg;
       };
 
       "org/gnome/shell/extensions/paperwm/workspaces/university" = {
         name = "Université";
         index = 1;
-        background = "file://" + ./wallpapers/frappe.svg;
       };
 
     };
