@@ -47,28 +47,42 @@ with lib.hm.gvariant;
         color-scheme = "prefer-dark";
       };
 
+      "org/gnome/desktop/background" = {
+	        picture-options = "zoom";
+	        picture-uri = "file://" + ./subtra.jpg;
+	        picture-uri-dark = "file://" + ./subtra.jpg;
+	      };
+
+
       "org/gnome/shell/extensions/dash-to-panel" = {
-        prefs-opened = true;
+        prefs-opened = false;
 
         isolate-monitors = true;
         isolate-workspaces = true;
 
-        panel-top-bottom-padding = 8;
+        appicon-margin = 2;
+        appicon-padding = 12;
 
         trans-panel-opacity = 0.75;
+
         trans-use-border = true;
         trans-use-custom-opacity = true;
 
         dot-color-dominant = true;
         dot-color-override = false;
         dot-color-unfocused-different = false;
+
         dot-position = "BOTTOM";
         dot-style-focused = "METRO";
-        dot-style-unfocused = "DOTS";
+        dot-style-unfocused = "SQUARES";
 
-        focus-highlight = true;
+        panel-top-bottom-margins = 0;
+        panel-top-bottom-padding = 0;
+
+        focus-highlight = false;
         focus-highlight-dominant = true;
 
+        highlight-appicon-hover = true;
         hide-overview-on-startup = true;
       };
 
