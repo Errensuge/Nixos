@@ -29,7 +29,7 @@ with lib.hm.gvariant;
       };
 
       "org/gnome/desktop/wm/preferences" = {
-        button-layout = "appmenu:minimize,close";
+        button-layout = "appmenu:maximize,minimize,close";
       };
 
       "org/gnome/shell/extensions/app-hider" = {
