@@ -19,15 +19,16 @@ in
         with pkgs;
         [
           # Gnome media apps
+          loupe
           papers
           celluloid
+
           resources
-          gnome-system-monitor
+          gnome-logs
         ]
         ++ [
           # Gnome files explorer
           nautilus
-          refine
         ];
     };
 

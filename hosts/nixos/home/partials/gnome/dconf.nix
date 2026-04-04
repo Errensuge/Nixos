@@ -21,7 +21,6 @@ with lib.hm.gvariant;
       "org/gnome/shell" = {
         disable-user-extensions = false;
         enabled-extensions = with pkgs.gnomeExtensions; [
-          vitals.extensionUuid
           paperwm.extensionUuid
           app-hider.extensionUuid
           dash-to-panel.extensionUuid
@@ -87,12 +86,6 @@ with lib.hm.gvariant;
 
       "org/gnome/shell/extensions/paperwm" = {
         show-window-position-bar = false;
-      };
-
-      "org/gnome/shell/extensions/vitals" = {
-        show-gpu = true;
-        show-voltage = false;
-        position-in-panel = 1;
       };
 
       "org/gnome/shell/extensions/paperwm/workspaces" = {

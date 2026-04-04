@@ -37,7 +37,6 @@ in
         papirus-icon-theme
 
         # Gnome Extensions
-        gnomeExtensions.vitals
         gnomeExtensions.paperwm
         gnomeExtensions.app-hider
         gnomeExtensions.dash-to-panel
