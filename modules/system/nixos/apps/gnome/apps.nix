@@ -22,10 +22,12 @@ in
           papers
           celluloid
           resources
+          gnome-system-monitor
         ]
         ++ [
           # Gnome files explorer
           nautilus
+          refine
         ];
     };
 

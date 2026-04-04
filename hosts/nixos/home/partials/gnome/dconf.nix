@@ -48,11 +48,10 @@ with lib.hm.gvariant;
       };
 
       "org/gnome/desktop/background" = {
-	        picture-options = "zoom";
-	        picture-uri = "file://" + ./subtra.jpg;
-	        picture-uri-dark = "file://" + ./subtra.jpg;
-	      };
-
+        picture-options = "zoom";
+        picture-uri = "file://" + ./WhiteHair.jpg;
+        picture-uri-dark = "file://" + ./WhiteHair.jpg;
+      };
 
       "org/gnome/shell/extensions/dash-to-panel" = {
         prefs-opened = false;

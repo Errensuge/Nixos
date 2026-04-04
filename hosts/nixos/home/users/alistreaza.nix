@@ -19,6 +19,7 @@
     home.shell.neovim.enable = true;
 
     # Code editor
+    home.env.nix.enable = true;
     home.ide.zed.enable = true;
 
     # Markdown Editor
