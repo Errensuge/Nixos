@@ -26,9 +26,6 @@
   os.virtualisation.cuda.enable = true;
   os.virtualisation.podman.enable = true;
 
-  # Flatpak
-  os.flatpak.apps.enable = true;
-
   # Ssh
   programs.ssh.enableAskPassword = false; # No-window git push fix
 
