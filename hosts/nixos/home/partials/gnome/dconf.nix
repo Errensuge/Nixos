@@ -5,6 +5,10 @@
 }:
 with lib.hm.gvariant;
 {
+  home.packages = with pkgs; [
+    numix-icon-theme-circle
+  ];
+
   dconf = {
     enable = true;
     settings = {
@@ -41,6 +45,7 @@ with lib.hm.gvariant;
       };
 
       "org/gnome/desktop/interface" = {
+        icon-theme = "Numix-Circle-Light";
         accent-color = "teal";
         color-scheme = "prefer-dark";
       };
