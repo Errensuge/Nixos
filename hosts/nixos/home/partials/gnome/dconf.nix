@@ -48,8 +48,8 @@ with lib.hm.gvariant;
 
       "org/gnome/desktop/background" = {
         picture-options = "zoom";
-        picture-uri = "file://" + ./WhiteHair.jpg;
-        picture-uri-dark = "file://" + ./WhiteHair.jpg;
+        picture-uri = "file://" + ./walls.jpg;
+        picture-uri-dark = "file://" + ./walls.jpg;
       };
 
       "org/gnome/shell/extensions/dash-to-panel" = {

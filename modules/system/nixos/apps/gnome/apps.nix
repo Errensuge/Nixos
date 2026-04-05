@@ -15,21 +15,9 @@ in
   config = mkIf cfg.enable {
 
     environment = {
-      systemPackages =
-        with pkgs;
-        [
-          # Gnome media apps
-          loupe
-          papers
-          celluloid
-
-          resources
-          gnome-logs
-        ]
-        ++ [
-          # Gnome files explorer
-          nautilus
-        ];
+      systemPackages = with pkgs; [
+        nautilus # Gnome files explorer
+      ];
     };
 
     services.gvfs.enable = true; # SMB, FTP, ... access
