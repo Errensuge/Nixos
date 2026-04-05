@@ -17,6 +17,9 @@
     home-manager.url = "github:nix-community/home-manager/release-25.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    # Nix Flatpak
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+
     # Nix Homebrew
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
     homebrew-core.url = "github:homebrew/homebrew-core";
@@ -32,6 +35,7 @@
       nix-darwin,
       flake-parts,
       import-tree,
+      nix-flatpak,
       home-manager,
       nix-homebrew,
       homebrew-core,
@@ -65,6 +69,7 @@
               ]
               ++ [
                 (import-tree ./overlays/nixos)
+                nix-flatpak.nixosModules.nix-flatpak
                 home-manager.nixosModules.home-manager
 
                 (import-tree ./hosts/common)
