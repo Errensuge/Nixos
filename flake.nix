@@ -93,7 +93,7 @@
 
                 home-manager.darwinModules.home-manager
                 (import-tree ./hosts/common)
-                (import-tree ./hosts/darwin/home)
+                (import-tree ./hosts/darwin/home/users)
               ];
             };
           };

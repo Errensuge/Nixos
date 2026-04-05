@@ -41,7 +41,6 @@ with lib.hm.gvariant;
       };
 
       "org/gnome/desktop/interface" = {
-        icon-theme = "Papirus";
         accent-color = "teal";
         color-scheme = "prefer-dark";
       };

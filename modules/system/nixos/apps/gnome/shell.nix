@@ -33,9 +33,6 @@ in
         # Gnome terminal
         ghostty
 
-        # Gnome icons
-        papirus-icon-theme
-
         # Gnome Extensions
         gnomeExtensions.paperwm
         gnomeExtensions.app-hider
