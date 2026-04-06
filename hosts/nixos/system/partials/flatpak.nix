@@ -7,7 +7,10 @@
   };
 
   services.flatpak.packages = [
-    "com.usebottles.bottles"
     "io.github.flattool.Warehouse"
+    "org.gnome.Papers"
+    "org.gnome.Loupe"
+    "org.gnome.Showtime"
+    "io.github.alainm23.planify"
   ];
 }
