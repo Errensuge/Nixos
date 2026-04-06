@@ -36,7 +36,7 @@ in
         # Gnome Extensions
         gnomeExtensions.paperwm
         gnomeExtensions.app-hider
-        gnomeExtensions.dash-to-panel
+        gnomeExtensions.dash-to-dock
 
       ];
     };

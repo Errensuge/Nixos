@@ -50,10 +50,15 @@
         # No bookmartks
         "browser.toolbars.bookmarks.visibility" = "never";
         # Vertical tabs
+        "sidebar.backupState" = {
+          "panelOpen" = true;
+          "launcherExpanded" = false;
+          "launcherVisible" = true;
+        };
         "sidebar.new-sidebar.has-used" = true;
         "sidebar.verticalTabs" = true;
         "sidebar.revamp" = true;
-        "sidebar.main.tools" = "history";
+        "sidebar.main.tools" = "history,passwords";
       };
     };
 
