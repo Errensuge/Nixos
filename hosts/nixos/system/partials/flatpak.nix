@@ -8,5 +8,6 @@
 
   services.flatpak.packages = [
     "com.usebottles.bottles"
+    "io.github.flattool.Warehouse"
   ];
 }
