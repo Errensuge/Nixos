@@ -6,7 +6,8 @@
 with lib.hm.gvariant;
 {
   home.packages = with pkgs; [
-    numix-icon-theme-square
+    gnome-tweaks
+    papirus-icon-theme
   ];
 
   dconf = {
@@ -45,7 +46,7 @@ with lib.hm.gvariant;
       };
 
       "org/gnome/desktop/interface" = {
-        icon-theme = "Numix-Square";
+        icon-theme = "Papirus";
         accent-color = "teal";
         color-scheme = "prefer-dark";
       };

@@ -15,7 +15,14 @@ in
   config = mkIf cfg.enable {
 
     environment = {
-      systemPackages = with pkgs; [ nautilus ];
+      systemPackages =
+        with pkgs;
+        [ nautilus ]
+        ++ [
+          papers
+          loupe
+          celluloid
+        ];
     };
 
     services.gvfs.enable = true; # SMB, FTP, ... access
