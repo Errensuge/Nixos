@@ -19,12 +19,6 @@
       };
     };
 
-    home.file = {
-      ".config/ghostty/" = {
-        source = ./config/ghostty;
-      };
-    };
-
     # Shell apps
     home.shell.nh.enable = true;
     home.shell.zsh.enable = true;
