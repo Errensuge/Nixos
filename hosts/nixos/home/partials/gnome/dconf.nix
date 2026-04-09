@@ -7,6 +7,9 @@ with lib.hm.gvariant;
 {
   home.packages = with pkgs; [
     papirus-icon-theme
+    gnomeExtensions.paperwm
+    gnomeExtensions.app-hider
+    gnomeExtensions.dash-to-dock
   ];
 
   dconf = {

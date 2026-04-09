@@ -26,7 +26,6 @@ in
 
     environment = {
       systemPackages = with pkgs; [
-        pods
         podman-compose
       ];
     };

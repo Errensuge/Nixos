@@ -12,6 +12,8 @@
       homeDirectory = "/home/alistreaza";
     };
 
+    home.xdg.enable = true;
+
     # Shell apps
     home.shell.nh.enable = true;
     home.shell.zsh.enable = true;
