@@ -17,15 +17,18 @@
   # System configurations
   os.keyboard.apple.enable = true;
 
+  # Flatpak configuration
+  os.flatpak.enable = true;
+
   # Virtualisation Apps
   os.virtualisation.cuda.enable = true;
   os.virtualisation.podman.enable = true;
 
-  # Terminal
-  programs.ssh.enableAskPassword = false; # No-window git push fix
-
   # Shells configurations
   os.shells.gnome.enable = true;
+
+  # Terminal
+  programs.ssh.enableAskPassword = false; # No-window git push fix
 
   # System version
   system.stateVersion = "25.11";
