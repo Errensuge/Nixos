@@ -22,7 +22,6 @@
 
     # Code editor
     home.env.nix.enable = true;
-    home.ide.zed.enable = true;
 
     # The state version is required and should stay at the version you
     # originally installed.

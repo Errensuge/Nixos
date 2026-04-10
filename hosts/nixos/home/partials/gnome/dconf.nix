@@ -9,7 +9,7 @@ with lib.hm.gvariant;
     papirus-icon-theme
     gnomeExtensions.paperwm
     gnomeExtensions.app-hider
-    gnomeExtensions.dash-to-dock
+    gnomeExtensions.dash-to-panel
   ];
 
   dconf = {
@@ -30,7 +30,7 @@ with lib.hm.gvariant;
         enabled-extensions = with pkgs.gnomeExtensions; [
           paperwm.extensionUuid
           app-hider.extensionUuid
-          dash-to-dock.extensionUuid
+          dash-to-panel.extensionUuid
         ];
       };
 
@@ -60,25 +60,36 @@ with lib.hm.gvariant;
         picture-uri-dark = "file://" + ./walls.jpg;
       };
 
-      "org/gnome/shell/extensions/dash-to-dock" = {
-        apply-custom-theme = false;
-        transparency-mode = "FIXED";
-        background-opacity = 0.45;
-        background-color = "rgb(0,0,0)";
-        custom-background-color = false;
-        custom-theme-shrink = false;
-        dash-max-icon-size = 35;
-        disable-overview-on-startup = true;
-        dock-fixed = true;
-        dock-position = "LEFT";
-        extend-height = true;
-        icon-size-fixed = true;
-        show-apps-at-top = false;
-        show-running = true;
-        show-favorites = true;
-        show-mounts = false;
-        show-trash = false;
-        show-windows-preview = false;
+      "org/gnome/shell/extensions/dash-to-panel" = {
+        prefs-opened = false;
+
+        isolate-monitors = true;
+        isolate-workspaces = true;
+
+        appicon-margin = 2;
+        appicon-padding = 12;
+
+        trans-panel-opacity = 0.75;
+
+        trans-use-border = true;
+        trans-use-custom-opacity = true;
+
+        dot-color-dominant = true;
+        dot-color-override = false;
+        dot-color-unfocused-different = false;
+
+        dot-position = "BOTTOM";
+        dot-style-focused = "METRO";
+        dot-style-unfocused = "SQUARES";
+
+        panel-top-bottom-margins = 0;
+        panel-top-bottom-padding = 0;
+
+        focus-highlight = false;
+        focus-highlight-dominant = true;
+
+        highlight-appicon-hover = true;
+        hide-overview-on-startup = true;
       };
 
       "org/gnome/shell/extensions/paperwm" = {

@@ -8,8 +8,7 @@
   os.audio.pipewire.enable = true;
 
   # Networks services
-  os.networks.dns.enable = true;
-  os.networks.manager.enable = true;
+  os.networking.enable = true;
 
   # Printing and sharing
   os.networks.samba.enable = true;
@@ -23,7 +22,6 @@
   os.virtualisation.podman.enable = true;
 
   # Terminal
-  os.flatpak.enable = true;
   programs.ssh.enableAskPassword = false; # No-window git push fix
 
   # Shells configurations

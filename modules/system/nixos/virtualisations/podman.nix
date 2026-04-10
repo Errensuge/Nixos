@@ -7,6 +7,8 @@
 with lib;
 let
   cfg = config.os.virtualisation.podman;
+  all = builtins.attrNames config.users.users;
+  users = builtins.filter (user: config.users.users.${user}.isNormalUser == true) all;
 in
 {
   options.os.virtualisation.podman = {
@@ -29,6 +31,8 @@ in
         podman-compose
       ];
     };
+
+    users.groups.podman.members = users;
 
   };
 }

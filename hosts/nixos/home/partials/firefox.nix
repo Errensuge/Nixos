@@ -2,9 +2,7 @@
 
 {
   programs.firefox = {
-
     enable = true;
-
     policies = {
       ExtensionSettings = {
         "uBlock0@raymondhill.net" = {
@@ -15,7 +13,6 @@
         };
       };
     };
-
     profiles.alistreaza = {
       settings = {
         # Disable some telemetry
@@ -61,7 +58,6 @@
         "sidebar.main.tools" = "history,passwords";
       };
     };
-
   };
   xdg.mimeApps.defaultApplications = {
     "text/html" = [ "firefox.desktop" ];

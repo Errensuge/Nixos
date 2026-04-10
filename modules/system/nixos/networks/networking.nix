@@ -1,11 +1,11 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.os.networks.dns;
+  cfg = config.os.networking;
 in
 {
-  options.os.networks.dns = {
-    enable = mkEnableOption "System dns service";
+  options.os.networking = {
+    enable = mkEnableOption "System networks manager service";
   };
   config = mkIf cfg.enable {
 
@@ -16,6 +16,8 @@ in
       nssmdns4 = true;
       openFirewall = true;
     };
+
+    networking.networkmanager.enable = true;
 
   };
 }

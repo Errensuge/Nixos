@@ -33,10 +33,10 @@ in
       systemPackages =
         with pkgs;
         [ nautilus ]
-        ++ [ ptyxis ]
         ++ [
           loupe
           papers
+          simple-scan
         ];
     };
 
