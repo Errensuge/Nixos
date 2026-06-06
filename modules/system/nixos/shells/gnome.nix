@@ -36,6 +36,7 @@ in
         ++ [
           loupe
           papers
+          refine
           simple-scan
         ];
     };

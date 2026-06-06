@@ -6,7 +6,6 @@
 with lib.hm.gvariant;
 {
   home.packages = with pkgs; [
-    papirus-icon-theme
     gnomeExtensions.paperwm
     gnomeExtensions.app-hider
     gnomeExtensions.dash-to-panel
@@ -49,15 +48,8 @@ with lib.hm.gvariant;
       };
 
       "org/gnome/desktop/interface" = {
-        icon-theme = "Papirus";
         accent-color = "teal";
         color-scheme = "prefer-dark";
-      };
-
-      "org/gnome/desktop/background" = {
-        picture-options = "zoom";
-        picture-uri = "file://" + ./walls.jpg;
-        picture-uri-dark = "file://" + ./walls.jpg;
       };
 
       "org/gnome/shell/extensions/dash-to-panel" = {

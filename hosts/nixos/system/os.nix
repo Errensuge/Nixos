@@ -25,7 +25,7 @@
   os.virtualisation.podman.enable = true;
 
   # Shells configurations
-  os.shells.gnome.enable = true;
+  os.shells.kde.enable = true;
 
   # Terminal
   programs.ssh.enableAskPassword = false; # No-window git push fix
