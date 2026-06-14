@@ -17,7 +17,11 @@ in
       "boot.shell_on_fail"
     ];
 
-    boot.plymouth.enable = true;
-
+    boot.plymouth = {
+      enable = true;
+      extraConfig = ''
+        DeviceScale=2
+      '';
+    };
   };
 }

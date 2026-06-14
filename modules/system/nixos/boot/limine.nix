@@ -9,7 +9,13 @@ in
   };
   config = mkIf cfg.enable {
 
-    boot.loader.limine.enable = true;
+    boot.loader = {
+      limine = {
+        enable = true;
+        maxGenerations = 10;
+      };
+      efi.canTouchEfiVariables = true;
+    };
 
   };
 }
