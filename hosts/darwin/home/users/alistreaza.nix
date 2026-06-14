@@ -1,4 +1,4 @@
-{ pkgs, import-tree, ... }:
+{ import-tree, ... }:
 {
   home-manager.users.alistreaza = {
 
@@ -31,7 +31,7 @@
     home.env.rust.enable = true;
     home.env.python.enable = true;
 
-    home.packages = with pkgs; [];
+    home.packages = [ ];
 
     # No Home Application Folders
     targets.darwin.linkApps.enable = false;

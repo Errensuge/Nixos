@@ -2,7 +2,7 @@
 
 {
   # System services
-  os.boot.systemd.enable = true;
+  os.boot.limine.enable = true;
   os.boot.plymouth.enable = true;
   os.graphics.nvidia.enable = true;
   os.audio.pipewire.enable = true;
@@ -25,7 +25,7 @@
   os.virtualisation.podman.enable = true;
 
   # Shells configurations
-  os.shells.kde.enable = true;
+  os.shells.gnome.enable = true;
 
   # Terminal
   programs.ssh.enableAskPassword = false; # No-window git push fix
