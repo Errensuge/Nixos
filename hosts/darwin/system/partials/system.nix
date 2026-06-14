@@ -56,7 +56,6 @@
         StageManagerHideWidgets = true;
         # Desktop
         StandardHideWidgets = true;
-        StandardHideDesktopIcons = true;
         EnableStandardClickToShowDesktop = false;
       };
       menuExtraClock.IsAnalog = false;
