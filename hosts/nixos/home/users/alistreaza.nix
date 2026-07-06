@@ -20,6 +20,9 @@
     home.shell.git.enable = true;
     home.shell.neovim.enable = true;
 
+    # Terminal app
+    home.ghostty.enable = true;
+
     # Code editor
     home.env.nix.enable = true;
 
