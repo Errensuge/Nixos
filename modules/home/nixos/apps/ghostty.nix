@@ -5,7 +5,7 @@ let
 in
 {
   options.home.ghostty = {
-    enable = mkEnableOption "Xdg service";
+    enable = mkEnableOption "Ghostty service";
   };
   config = mkIf cfg.enable {
 
