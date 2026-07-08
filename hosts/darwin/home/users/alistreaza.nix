@@ -27,15 +27,13 @@
 
     # Nix & languages env deps
     home.env.nix.enable = true;
-    home.env.jdk.enable = true;
-    home.env.rust.enable = true;
-    home.env.python.enable = true;
-
-    home.packages = [ ];
 
     # No Home Application Folders
     targets.darwin.linkApps.enable = false;
     targets.darwin.copyApps.enable = false;
+
+    # Home packages
+    home.packages = [ ];
 
     # The state version is required and should stay at the version you
     # originally installed.

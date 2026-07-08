@@ -5,7 +5,9 @@ let
 in
 {
   options.home.firefox = {
-    enable = mkEnableOption "Ghostty service";
+    enable = mkEnableOption "Firefox service";
+    privacy = mkEnableOption "Firefox privacy service";
+    sanity = mkEnableOption "Sanitize Firefox on shutdown";
   };
   config = mkIf cfg.enable {
 
@@ -18,18 +20,45 @@ in
 
     programs.firefox = {
       enable = true;
+      languagePacks = [ "fr-FR" ];
       policies = {
-        ExtensionSettings = {
-          "uBlock0@raymondhill.net" = {
-            default_area = "menupanel";
-            install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
-            installation_mode = "force_installed";
-            private_browsing = true;
+        DisablePocket = true;
+        ExtensionSettings =
+          { }
+          + mkif cfg.privacy {
+            "uBlock0@raymondhill.net" = {
+              default_area = "menupanel";
+              install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+              installation_mode = "force_installed";
+              private_browsing = true;
+            };
           };
-        };
+      }
+      + mkif cfg.privacy {
+        DisableTelemetry = true;
+        DisableFirefoxStudies = true;
+        EnableTrackingProtection = true;
       };
-      profiles.alistreaza = {
+      profiles.default = {
         settings = {
+          # Vertical tabs
+          "sidebar.revamp" = true;
+          "sidebar.verticalTabs" = true;
+          "sidebar.new-sidebar.has-used" = true;
+          "sidebar.main.tools" = "history,passwords";
+          "sidebar.backupState" = {
+            "panelOpen" = true;
+            "launcherExpanded" = false;
+            "launcherVisible" = true;
+          };
+          # No bookmarks
+          "browser.toolbars.bookmarks.visibility" = "never";
+          # New tab page
+          "browser.newtabpage.activity-stream.feeds.topsites" = false;
+          "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+          "browser.newtabpage.activity-stream.showSponsoredCheckboxes" = false;
+        }
+        + mkif cfg.privacy {
           # Disable some telemetry
           "app.shield.optoutstudies.enabled" = false;
           "browser.discovery.enabled" = false;
@@ -55,25 +84,20 @@ in
           "toolkit.telemetry.unified" = false;
           "toolkit.telemetry.unifiedIsOptIn" = false;
           "toolkit.telemetry.updatePing.enabled" = false;
-          # New tab page
-          "browser.newtabpage.activity-stream.feeds.topsites" = false;
-          "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
-          "browser.newtabpage.activity-stream.showSponsoredCheckboxes" = false;
-          # No bookmartks
-          "browser.toolbars.bookmarks.visibility" = "never";
-          # Vertical tabs
-          "sidebar.backupState" = {
-            "panelOpen" = true;
-            "launcherExpanded" = false;
-            "launcherVisible" = true;
+        }
+        + mkif cfg.sanity {
+          # Sanitize
+          "SanitizeOnShutdown" = {
+            "Locked" = false;
+            "Cache" = true;
+            "History" = true;
+            "Cookies" = true;
+            "Sessions" = true;
+            "FormData" = true;
+            "SiteSettings" = true;
           };
-          "sidebar.new-sidebar.has-used" = true;
-          "sidebar.verticalTabs" = true;
-          "sidebar.revamp" = true;
-          "sidebar.main.tools" = "history,passwords";
         };
       };
     };
-
   };
 }
