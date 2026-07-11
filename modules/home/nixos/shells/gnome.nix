@@ -1,11 +1,16 @@
-{ lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 with lib;
 let
-  cfg = config.home.shell.gnome;
+  cfg = config.home.shells.gnome;
 in
 {
-  options.home.shell.gnome = {
-
+  options.home.shells.gnome = {
+    enable = mkEnableOption "Gnome service";
     extensions = {
       paperwm = mkOption {
         type = types.bool;
@@ -26,15 +31,27 @@ in
       };
 
     };
-    config = {
-      dconf = {
-        enable = true;
-        settings = {
+  };
+  config = mkIf cfg.enable {
 
+    home.packages = mkMerge [
+      [
+        pkgs.numix-icon-theme
+        pkgs.numix-icon-theme-square
+      ]
+      (mkIf cfg.extensions.paperwm [ pkgs.gnomeExtensions.paperwm ])
+      (mkIf cfg.extensions.app-hider [ pkgs.gnomeExtensions.app-hider ])
+      (mkIf cfg.extensions.dash-to-panel [ pkgs.gnomeExtensions.dash-to-panel ])
+    ];
+
+    dconf = {
+      enable = true;
+      settings = mkMerge [
+        {
           # We define the input sources to use the French layout with Mac keyboard variant.
           "org/gnome/desktop/input-sources" = {
             sources = [
-              (mkTuple [
+              (lib.hm.gvariant.mkTuple [
                 "xkb"
                 "fr+mac"
               ])
@@ -44,6 +61,7 @@ in
           # We define the interface settings to use a teal accent color and prefer dark color scheme.
           "org/gnome/desktop/interface" = {
             accent-color = "teal";
+            icon-theme = "Numix-Square";
             color-scheme = "prefer-dark";
           };
 
@@ -57,14 +75,14 @@ in
             disable-user-extensions = false;
             enabled-extensions =
               with pkgs.gnomeExtensions;
-              [ ]
-              + mk-if cfg.extensions.paperwm [ paperwm.extensionUuid ]
-              + mk-if cfg.extensions.app-hider [ app-hider.extensionUuid ]
-              + mk-if cfg.extensions.dash-to-panel [ dash-to-panel.extensionUuid ];
+              mkMerge [
+                (mkIf cfg.extensions.paperwm [ paperwm.extensionUuid ])
+                (mkIf cfg.extensions.app-hider [ app-hider.extensionUuid ])
+                (mkIf cfg.extensions.dash-to-panel [ dash-to-panel.extensionUuid ])
+              ];
           };
-
         }
-        + mkIf cfg.extensions.app-hider {
+        (mkIf cfg.extensions.app-hider {
           "org/gnome/shell/extensions/app-hider" = {
             hidden-apps = [
               "nvim.desktop"
@@ -73,8 +91,8 @@ in
               "nixos-manual.desktop"
             ];
           };
-        }
-        + mkIf cfg.extensions.dash-to-panel {
+        })
+        (mkIf cfg.extensions.dash-to-panel {
           "org/gnome/shell/extensions/dash-to-panel" = {
             prefs-opened = false;
             isolate-monitors = true;
@@ -97,8 +115,8 @@ in
             highlight-appicon-hover = true;
             hide-overview-on-startup = true;
           };
-        }
-        + mkIf cfg.extensions.paperwm {
+        })
+        (mkIf cfg.extensions.paperwm {
           "org/gnome/shell/extensions/paperwm" = {
             show-window-position-bar = false;
             show-workspace-indicator = false;
@@ -117,8 +135,8 @@ in
             name = "Université";
             index = 1;
           };
-        };
-      };
+        })
+      ];
     };
   };
 }

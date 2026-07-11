@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   # System services
@@ -30,15 +30,6 @@
   # Terminal
   programs.ssh.enableAskPassword = false; # No-window git push fix
 
-  environment.systemPackages = with pkgs; [
-    pods
-    zed-editor
-  ];
-
-  services.flatpak.packages = [
-    "io.github.flattool.Warehouse"
-  ];
-
   # System version
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
 }

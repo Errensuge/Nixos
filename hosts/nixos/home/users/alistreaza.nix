@@ -1,4 +1,4 @@
-{ import-tree, ... }:
+{ pkgs, import-tree, ... }:
 {
   home-manager.users.alistreaza = {
     imports = [
@@ -11,7 +11,9 @@
       homeDirectory = "/home/alistreaza";
     };
 
+    # Gnome
     home.xdg.enable = true;
+    home.shells.gnome.enable = true;
 
     # Shell apps
     home.shell.nh.enable = true;
@@ -22,11 +24,19 @@
     # Code editor
     home.env.nix.enable = true;
 
-    # Terminal app
+    # Terminal Apps
     home.ghostty.enable = true;
+
+    # Firefox app
+    home.firefox.enable = true;
+    home.firefox.privacy = true;
+
+    home.packages = with pkgs; [
+      zed-editor
+    ];
 
     # The state version is required and should stay at the version you
     # originally installed.
-    home.stateVersion = "25.11";
+    home.stateVersion = "26.05";
   };
 }

@@ -6,19 +6,27 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
 
     # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Nix Darwin
-    nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-25.11";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     # Home manager
-    home-manager.url = "github:nix-community/home-manager/release-25.11";
+    home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # Nix Flatpak
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+
+    # Niri
+    niri.url = "github:sodiboo/niri-flake";
+    niri.inputs.nixpkgs.follows = "nixpkgs";
+
+    # Noctalia
+    noctalia.url = "github:noctalia-dev/noctalia-shell";
+    noctalia.inputs.nixpkgs.follows = "nixpkgs";
 
     # Nix Homebrew
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
@@ -31,7 +39,9 @@
   outputs =
     inputs@{
       self,
+      niri,
       nixpkgs,
+      noctalia,
       nix-darwin,
       flake-parts,
       import-tree,
@@ -55,10 +65,12 @@
             nixos = nixpkgs.lib.nixosSystem {
               specialArgs = {
                 self = self;
-                nixpkgs = nixpkgs;
-                nixpkgs-unstable = nixpkgs-unstable;
+                niri = niri;
+                noctalia = noctalia;
                 import-tree = import-tree;
                 home-manager = home-manager;
+                nixpkgs = nixpkgs;
+                nixpkgs-unstable = nixpkgs-unstable;
               };
               modules = [
                 (import-tree ./overlays/nixos)
@@ -69,12 +81,14 @@
               ]
               ++ [
                 (import-tree ./overlays/nixos)
+
                 nix-flatpak.nixosModules.nix-flatpak
                 home-manager.nixosModules.home-manager
 
                 (import-tree ./hosts/common)
                 (import-tree ./hosts/nixos/home/users)
-              ];
+              ]
+              ++ [ niri.nixosModules.niri ];
             };
           };
           darwinConfigurations = {

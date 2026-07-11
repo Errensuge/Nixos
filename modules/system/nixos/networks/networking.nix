@@ -17,7 +17,5 @@ in
       openFirewall = true;
     };
 
-    networking.networkmanager.enable = true;
-
   };
 }

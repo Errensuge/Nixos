@@ -32,12 +32,13 @@ in
 
       systemPackages =
         with pkgs;
-        [ nautilus ]
-        ++ [
+        [
+          nautilus
           loupe
           papers
           simple-scan
-        ];
+        ]
+        ++ (lib.optional config.os.flatpak.enable gnome-software);
     };
 
   };
