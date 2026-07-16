@@ -22,7 +22,7 @@
 
   # Virtualisation Apps
   os.virtualisation.cuda.enable = true;
-  os.virtualisation.podman.enable = true;
+  os.virtualisation.docker.enable = true;
 
   # Shells configurations
   os.shells.gnome.enable = true;
