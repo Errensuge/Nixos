@@ -20,14 +20,6 @@
     # Nix Flatpak
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
-    # Niri
-    niri.url = "github:sodiboo/niri-flake";
-    niri.inputs.nixpkgs.follows = "nixpkgs";
-
-    # Noctalia
-    noctalia.url = "github:noctalia-dev/noctalia-shell";
-    noctalia.inputs.nixpkgs.follows = "nixpkgs";
-
     # Nix Homebrew
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
     homebrew-core.url = "github:homebrew/homebrew-core";
@@ -39,9 +31,7 @@
   outputs =
     inputs@{
       self,
-      niri,
       nixpkgs,
-      noctalia,
       nix-darwin,
       flake-parts,
       import-tree,
@@ -65,8 +55,6 @@
             nixos = nixpkgs.lib.nixosSystem {
               specialArgs = {
                 self = self;
-                niri = niri;
-                noctalia = noctalia;
                 import-tree = import-tree;
                 home-manager = home-manager;
                 nixpkgs = nixpkgs;
@@ -87,8 +75,7 @@
 
                 (import-tree ./hosts/common)
                 (import-tree ./hosts/nixos/home/users)
-              ]
-              ++ [ niri.nixosModules.niri ];
+              ];
             };
           };
           darwinConfigurations = {
