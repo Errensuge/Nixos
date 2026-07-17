@@ -21,7 +21,7 @@
   os.flatpak.enable = true;
 
   # Virtualisation Apps
-  os.virtualisation.cuda.enable = true;
+  os.virtualisation.cuda.enable = false;
   os.virtualisation.docker.enable = true;
 
   # Shells configurations
