@@ -1,5 +1,4 @@
 {
-  pkgs,
   lib,
   config,
   ...
@@ -15,14 +14,6 @@ in
   config = mkIf cfg.enable {
 
     hardware.nvidia-container-toolkit.enable = true;
-    environment.systemPackages = with pkgs.cudaPackages; [
-      cudatoolkit
-      cudnn
-      libcublas
-      libcufile
-      libcusparse
-      nccl
-    ];
 
   };
 }

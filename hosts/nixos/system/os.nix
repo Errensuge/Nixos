@@ -2,7 +2,7 @@
 
 {
   # System services
-  os.boot.limine.enable = true;
+  os.boot.systemd.enable = true;
   os.boot.plymouth.enable = true;
   os.graphics.nvidia.enable = true;
   os.audio.pipewire.enable = true;
@@ -17,15 +17,12 @@
   # System configurations
   os.keyboard.apple.enable = true;
 
-  # Flatpak configuration
-  os.flatpak.enable = true;
-
   # Virtualisation Apps
   os.virtualisation.cuda.enable = false;
-  os.virtualisation.docker.enable = true;
+  os.virtualisation.podman.enable = true;
 
   # Shells configurations
-  os.shells.gnome.enable = true;
+  os.shells.pantheon.enable = true;
 
   # Terminal
   programs.ssh.enableAskPassword = false; # No-window git push fix
