@@ -35,6 +35,7 @@ in
         [
           papers
           nautilus
+          gnome-text-editor
         ];
     };
 

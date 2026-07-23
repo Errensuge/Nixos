@@ -1,4 +1,4 @@
-{ pkgs, import-tree, ... }:
+{ import-tree, ... }:
 {
   home-manager.users.alistreaza = {
     imports = [
@@ -30,10 +30,6 @@
     # Firefox app
     home.firefox.enable = true;
     home.firefox.privacy = true;
-
-    home.packages = with pkgs; [
-      zed-editor
-    ];
 
     # The state version is required and should stay at the version you
     # originally installed.

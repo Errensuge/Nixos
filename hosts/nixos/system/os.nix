@@ -22,7 +22,7 @@
   os.virtualisation.podman.enable = true;
 
   # Shells configurations
-  os.shells.pantheon.enable = true;
+  os.shells.gnome.enable = true;
 
   # Terminal
   programs.ssh.enableAskPassword = false; # No-window git push fix
