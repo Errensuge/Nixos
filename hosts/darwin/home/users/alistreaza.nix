@@ -1,4 +1,4 @@
-{ import-tree, ... }:
+{ pkgs, import-tree, ... }:
 {
   home-manager.users.alistreaza = {
 
@@ -33,7 +33,7 @@
     targets.darwin.copyApps.enable = false;
 
     # Home packages
-    home.packages = [ ];
+    home.packages = with pkgs; [];
 
     # The state version is required and should stay at the version you
     # originally installed.
