@@ -12,12 +12,16 @@ let
 in
 {
   options.os.virtualisation.podman = {
-    enable = mkEnableOption "System docker service";
+    gtk = mkEnableOption "Podman app install";
+    enable = mkEnableOption "System podman service";
   };
   config = mkIf cfg.enable {
 
     virtualisation = {
-      containers.enable = true;
+      containers = {
+        enable = true;
+        registries.search = [ "docker.io" ];
+      };
       podman = {
         enable = true;
         dockerCompat = true;
@@ -27,9 +31,7 @@ in
     };
 
     environment = {
-      systemPackages = with pkgs; [
-        podman-compose
-      ];
+      systemPackages = with pkgs; [ podman-compose ] ++ lib.optionals cfg.gtk [ pods ];
     };
 
     users.groups.podman.members = users;

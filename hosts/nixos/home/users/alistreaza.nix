@@ -1,9 +1,16 @@
-{ import-tree, ... }:
+{
+  pkgs,
+  flatpaks,
+  import-tree,
+  ...
+}:
 {
   home-manager.users.alistreaza = {
     imports = [
       (import-tree ../../../../modules/home/common)
       (import-tree ../../../../modules/home/nixos)
+
+      flatpaks.homeManagerModules.nix-flatpak
     ];
 
     home = {
@@ -30,6 +37,9 @@
     # Firefox app
     home.firefox.enable = true;
     home.firefox.privacy = true;
+
+    # Apps installation
+    home.packages = with pkgs; [ zed-editor ];
 
     # The state version is required and should stay at the version you
     # originally installed.

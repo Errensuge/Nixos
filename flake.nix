@@ -59,6 +59,7 @@
                 home-manager = home-manager;
                 nixpkgs = nixpkgs;
                 nixpkgs-unstable = nixpkgs-unstable;
+                flatpaks = nix-flatpak;
               };
               modules = [
                 (import-tree ./overlays/nixos)

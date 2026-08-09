@@ -43,6 +43,7 @@ in
         settings = mkMerge [
           {
             # Vertical tabs
+            "browser.nova.enabled" = true;
             "sidebar.revamp" = true;
             "sidebar.verticalTabs" = true;
             "sidebar.new-sidebar.has-used" = true;

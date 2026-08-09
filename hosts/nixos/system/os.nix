@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   # System services
@@ -17,12 +17,17 @@
   # System configurations
   os.keyboard.apple.enable = true;
 
-  # Virtualisation Apps
-  os.virtualisation.cuda.enable = false;
+  # Podman & Cuda
+  os.virtualisation.cuda.enable = true;
   os.virtualisation.podman.enable = true;
 
   # Shells configurations
+  os.flatpak.enable = true;
   os.shells.gnome.enable = true;
+
+  # Apps configurations
+  os.flatpak.gtk = true;
+  os.virtualisation.podman.gtk = true;
 
   # Terminal
   programs.ssh.enableAskPassword = false; # No-window git push fix

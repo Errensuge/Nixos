@@ -19,6 +19,10 @@
     ) (nixpkgs.lib.toList pkg.meta.license)
     || builtins.elem (nixpkgs.lib.getName pkg) [
       "nvidia-x11"
+    ]
+    || builtins.elem (nixpkgs.lib.getName pkg) [
+      "steam"
+      "steam-unwrapped"
     ];
 
   nixpkgs.overlays = [

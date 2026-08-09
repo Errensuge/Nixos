@@ -30,13 +30,10 @@ in
         gnome-user-docs
       ];
 
-      systemPackages =
-        with pkgs;
-        [
-          papers
-          nautilus
-          gnome-text-editor
-        ];
+      systemPackages = with pkgs; [
+        papers
+        nautilus
+      ];
     };
 
   };
