@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.os.steam;
+  cfg = config.os.apps.games.steam;
 in
 {
-  options.os.steam = {
+  options.os.apps.games.steam = {
     enable = mkEnableOption "System pipewire service";
   };
   config = mkIf cfg.enable {

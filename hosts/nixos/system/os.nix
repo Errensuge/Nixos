@@ -30,6 +30,7 @@
   os.virtualisation.podman.gtk = true;
 
   # Terminal
+  os.apps.games.steam = true;
   programs.ssh.enableAskPassword = false; # No-window git push fix
 
   # System version

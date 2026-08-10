@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.os.protonge;
+  cfg = config.os.apps.games.protonge;
 in
 {
-  options.os.protonge = {
+  options.os.apps.games.protonge = {
     enable = mkEnableOption "System pipewire service";
   };
   config = mkIf cfg.enable {
