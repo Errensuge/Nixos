@@ -65,6 +65,7 @@
                 (import-tree ./overlays/nixos)
                 (import-tree ./hosts/common)
 
+                (import-tree ./modules/system/common)
                 (import-tree ./modules/system/nixos)
                 (import-tree ./hosts/nixos/system)
               ]
@@ -89,11 +90,12 @@
                 homebrew-cask = homebrew-cask;
               };
               modules = [
-                nix-homebrew.darwinModules.nix-homebrew
-                (import-tree ./modules/system/darwin)
-
                 (import-tree ./hosts/common)
                 (import-tree ./hosts/darwin/system)
+
+                nix-homebrew.darwinModules.nix-homebrew
+                (import-tree ./modules/system/common)
+                (import-tree ./modules/system/darwin)
               ]
               ++ [
                 (import-tree ./overlays/darwin)
