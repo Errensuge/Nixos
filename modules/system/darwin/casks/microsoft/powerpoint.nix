@@ -1,19 +1,20 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.os.homebrew.microsoft;
+  cfg = config.os.homebrew.microsoft.powerpoint;
 in
 {
-  options.os.homebrew.microsoft = {
+  options.os.homebrew.microsoft.powerpoint = {
     enable = mkEnableOption "System microsoft homebrew service";
   };
   config = mkIf cfg.enable {
 
     homebrew.casks = [
-      "microsoft-word"
-      "microsoft-excel"
       "microsoft-powerpoint"
-      "microsoft-teams"
+    ];
+
+    system.defaults.dock.persistent-apps = [
+      { app = "/Applications/Microsoft PowerPoint.app"; }
     ];
 
   };

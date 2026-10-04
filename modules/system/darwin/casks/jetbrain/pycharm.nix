@@ -1,22 +1,20 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.os.homebrew.jetbrain;
+  cfg = config.os.homebrew.jetbrain.pycharm;
 in
 {
-  options.os.homebrew.jetbrain = {
+  options.os.homebrew.jetbrain.pycharm = {
     enable = mkEnableOption "System jetbrain homebrew service";
   };
   config = mkIf cfg.enable {
 
     homebrew.casks = [
-      "intellij-idea"
       "pycharm"
-      "clion"
-      "rustrover"
-      "phpstorm"
-      "rubymine"
-      "goland"
+    ];
+
+    system.defaults.dock.persistent-apps = [
+      { app = "/Applications/PyCharm.app"; }
     ];
 
   };

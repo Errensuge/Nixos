@@ -13,5 +13,9 @@ in
       "zen"
     ];
 
+    system.defaults.dock.persistent-apps = [
+      { app = "/Applications/Zen.app"; }
+    ];
+
   };
 }

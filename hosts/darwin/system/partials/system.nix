@@ -18,22 +18,7 @@
         orientation = "left";
         persistent-apps = [
           { app = "/System/Applications/Apps.app"; }
-          { app = "/Applications/Zen.app"; }
           { app = "/System/Applications/Mail.app"; }
-          { app = "/Applications/Obsidian.app"; }
-          { app = "/Applications/Microsoft Word.app"; }
-          { app = "/Applications/Microsoft Excel.app"; }
-          { app = "/Applications/Microsoft PowerPoint.app"; }
-          { app = "/Applications/Microsoft Teams.app"; }
-          { app = "/Applications/Zed.app"; }
-          { app = "/Applications/IntelliJ IDEA.app"; }
-          { app = "/Applications/PyCharm.app"; }
-          { app = "/Applications/CLion.app"; }
-          { app = "/Applications/RustRover.app"; }
-          { app = "/Applications/PhpStorm.app"; }
-          { app = "/Applications/RubyMine.app"; }
-          { app = "/Applications/GoLand.app"; }
-          { app = "/Applications/Ghostty.app"; }
         ];
         persistent-others = [ ];
         wvous-bl-corner = 1;

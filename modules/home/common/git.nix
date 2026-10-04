@@ -9,7 +9,7 @@ let
 in
 {
   options.home.shell.git = {
-    enable = mkEnableOption "Zen Editor options";
+    enable = mkEnableOption "Git options";
   };
   config = mkIf cfg.enable {
 

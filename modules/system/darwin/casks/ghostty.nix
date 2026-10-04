@@ -13,5 +13,9 @@ in
       "ghostty"
     ];
 
+    system.defaults.dock.persistent-apps = [
+      { app = "/Applications/Ghostty.app"; }
+    ];
+
   };
 }
