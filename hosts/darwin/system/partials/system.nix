@@ -16,10 +16,6 @@
         tilesize = 30;
         autohide = false;
         orientation = "left";
-        persistent-apps = [
-          { app = "/System/Applications/Apps.app"; }
-          { app = "/System/Applications/Mail.app"; }
-        ];
         persistent-others = [ ];
         wvous-bl-corner = 1;
         wvous-br-corner = 3;

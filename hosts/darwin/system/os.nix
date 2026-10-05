@@ -1,6 +1,12 @@
 { ... }:
 {
   system.primaryUser = "alistreaza";
+  os.homebrew.enable = true;
+
+  system.defaults.dock.persistent-apps = [
+    { app = "/System/Applications/Apps.app"; }
+    { app = "/System/Applications/Mail.app"; }
+  ];
 
   # Homebrew System apps
   os.homebrew.keka.enable = true;
@@ -15,6 +21,7 @@
   os.homebrew.microsoft.powerpoint.enable = true;
   os.homebrew.microsoft.team.enable = true;
   os.homebrew.obsidian.enable = true;
+  os.homebrew.zotero.enable = true;
 
   # Homebrew IDE apps
   os.homebrew.zed.enable = true;
