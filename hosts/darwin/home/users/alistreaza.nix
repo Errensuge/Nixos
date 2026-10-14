@@ -1,6 +1,6 @@
 { import-tree, ... }:
 {
-  home-manager.users.alistreaza = {
+  home-manager.users.alistreaza = { lib, ... }: {
 
     imports = [
       (import-tree ../../../../modules/home/common)
@@ -31,6 +31,11 @@
     # No Home Application Folders
     targets.darwin.linkApps.enable = false;
     targets.darwin.copyApps.enable = false;
+
+    home.activation.widgets = lib.hm.dag.entryAfter ["writeBoundary"] ''
+        run /usr/bin/defaults delete com.apple.notificationcenterui || true
+        run /usr/bin/killall NotificationCenter || true
+    '';
 
     # The state version is required and should stay at the version you
     # originally installed.
