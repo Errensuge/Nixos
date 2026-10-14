@@ -13,9 +13,5 @@ in
       "pycharm"
     ];
 
-    system.defaults.dock.persistent-apps = [
-      { app = "/Applications/PyCharm.app"; }
-    ];
-
   };
 }

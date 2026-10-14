@@ -13,9 +13,5 @@ in
       "zed"
     ];
 
-    system.defaults.dock.persistent-apps = [
-      { app = "/Applications/Zed.app"; }
-    ];
-
   };
 }

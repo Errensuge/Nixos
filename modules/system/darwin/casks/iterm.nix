@@ -13,9 +13,5 @@ in
       "iterm2"
     ];
 
-    system.defaults.dock.persistent-apps = [
-      { app = "/Applications/iTerm.app"; }
-    ];
-
   };
 }

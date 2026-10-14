@@ -13,9 +13,5 @@ in
       "phpstorm"
     ];
 
-    system.defaults.dock.persistent-apps = [
-      { app = "/Applications/PhpStorm.app"; }
-    ];
-
   };
 }

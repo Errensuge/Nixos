@@ -13,9 +13,5 @@ in
       "intellij-idea"
     ];
 
-    system.defaults.dock.persistent-apps = [
-      { app = "/Applications/IntelliJ IDEA.app"; }
-    ];
-
   };
 }

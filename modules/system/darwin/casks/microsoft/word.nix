@@ -13,9 +13,5 @@ in
       "microsoft-word"
     ];
 
-    system.defaults.dock.persistent-apps = [
-      { app = "/Applications/Microsoft Word.app"; }
-    ];
-
   };
 }

@@ -13,9 +13,5 @@ in
       "rustrover"
     ];
 
-    system.defaults.dock.persistent-apps = [
-      { app = "/Applications/RustRover.app"; }
-    ];
-
   };
 }

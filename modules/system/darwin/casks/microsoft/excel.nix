@@ -13,9 +13,5 @@ in
       "microsoft-excel"
     ];
 
-    system.defaults.dock.persistent-apps = [
-      { app = "/Applications/Microsoft Excel.app"; }
-    ];
-
   };
 }

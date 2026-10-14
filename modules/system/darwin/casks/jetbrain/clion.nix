@@ -13,9 +13,5 @@ in
       "clion"
     ];
 
-    system.defaults.dock.persistent-apps = [
-      { app = "/Applications/CLion.app"; }
-    ];
-
   };
 }

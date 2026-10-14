@@ -13,9 +13,5 @@ in
       "rubymine"
     ];
 
-    system.defaults.dock.persistent-apps = [
-      { app = "/Applications/RubyMine.app"; }
-    ];
-
   };
 }

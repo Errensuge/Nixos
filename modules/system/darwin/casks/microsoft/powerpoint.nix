@@ -13,9 +13,5 @@ in
       "microsoft-powerpoint"
     ];
 
-    system.defaults.dock.persistent-apps = [
-      { app = "/Applications/Microsoft PowerPoint.app"; }
-    ];
-
   };
 }

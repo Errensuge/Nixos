@@ -13,9 +13,5 @@ in
       "zotero"
     ];
 
-    system.defaults.dock.persistent-apps = [
-      { app = "/Applications/Zotero.app"; }
-    ];
-
   };
 }

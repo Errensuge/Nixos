@@ -13,9 +13,5 @@ in
       "microsoft-teams"
     ];
 
-    system.defaults.dock.persistent-apps = [
-      { app = "/Applications/Microsoft Teams.app"; }
-    ];
-
   };
 }

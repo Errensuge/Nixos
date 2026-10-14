@@ -13,9 +13,5 @@ in
       "goland"
     ];
 
-    system.defaults.dock.persistent-apps = [
-      { app = "/Applications/GoLand.app"; }
-    ];
-
   };
 }

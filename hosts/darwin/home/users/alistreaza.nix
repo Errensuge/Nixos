@@ -32,9 +32,6 @@
     targets.darwin.linkApps.enable = false;
     targets.darwin.copyApps.enable = false;
 
-    # Home packages
-    home.packages = [];
-
     # The state version is required and should stay at the version you
     # originally installed.
     home.stateVersion = "26.05";

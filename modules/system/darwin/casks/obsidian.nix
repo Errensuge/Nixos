@@ -13,9 +13,5 @@ in
       "obsidian"
     ];
 
-    system.defaults.dock.persistent-apps = [
-      { app = "/Applications/Obsidian.app"; }
-    ];
-
   };
 }
