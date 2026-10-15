@@ -32,6 +32,7 @@
     targets.darwin.linkApps.enable = false;
     targets.darwin.copyApps.enable = false;
 
+    # Activation script after all
     home.activation.widgets = lib.hm.dag.entryAfter ["writeBoundary"] ''
         run /usr/bin/defaults delete com.apple.notificationcenterui || true
         run /usr/bin/killall NotificationCenter || true

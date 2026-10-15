@@ -36,8 +36,11 @@ in
       mutableTaps = false;
     };
 
-    homebrew.enable = true;
-    homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
+    homebrew = {
+      enable = true;
+      onActivation.cleanup = "zap";
+      taps = builtins.attrNames config.nix-homebrew.taps;
+    };
 
   };
 }
