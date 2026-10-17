@@ -13,7 +13,7 @@ in
   };
   config = mkIf cfg.enable {
 
-    hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+    hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.latest;
 
     services.xserver.enable = true;
     services.xserver.videoDrivers = [
